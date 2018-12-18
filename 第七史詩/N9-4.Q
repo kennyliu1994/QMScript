@@ -21,6 +21,9 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
+¯S®í´£¿ô°j¸ô
+«H®{
+
 
 [Script]
 Sub ¾Ô°«()
@@ -101,6 +104,7 @@ Sub GO_W()
     Loop Until intX > 0 And intY > 0
 End Sub
 Sub Ä_½c()
+    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.6, BoxX, BoxY
     FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.6, BoxX, BoxY
     FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.6, BoxX, BoxY
     If BoxX > 0 And BoxY > 0 Then 

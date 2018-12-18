@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=335f57d3-ed78-4691-bb23-10c8c564093d
 Description=N5-2
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -21,6 +21,7 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
+ªü¦Nº¿§V´µ
 
 [Script]
 Sub ¾Ô°«()

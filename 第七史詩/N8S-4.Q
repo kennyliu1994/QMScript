@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=bef95b7c-e933-46f1-af8f-c9edc99fd1ce
 Description=N8S-4
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -21,6 +21,7 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
+¥vµÜ©i
 
 [Script]
 Sub ¾Ô°«()
