@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=335f57d3-ed78-4691-bb23-10c8c564093d
 Description=N5-2
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -160,13 +160,13 @@ Do
 Loop Until intX > 0 And intY > 0
 Call GO_W()
 Call GO_S()
-Delay 2000
+Delay 1000
 Call GO_S()
 Call GO_W()
 Call GO_RED_N()
-Delay 2000
+Delay 1000
 Call GO_RED_N()
 Call GO_E()
-Delay 2000
+Delay 1000
 Call GO_E()
 MessageBox "END"
