@@ -167,4 +167,6 @@ Call GO_RED_N()
 Delay 2000
 Call GO_RED_N()
 Call GO_E()
+Delay 2000
+Call GO_E()
 MessageBox "END"
