@@ -22,6 +22,7 @@ QUI=
 SetupOCXFile=
 [Comment]
 阿吉瑪努斯
+永恆森林的塵埃
 
 [Script]
 Sub 戰鬥()
@@ -128,41 +129,42 @@ Sub 寶箱()
 End Sub
 Call 戰鬥()
 Call GO_E()
-Call GO_RED_N()
-Call GO_W()
-Call GO_S()
-Delay 2000
-Call GO_S()
-Call GO_E()
-Delay 2000
-Call GO_RED_N()
 Do
     Call 寶箱()
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 274, 139
-        Delay 297
+        MoveTo 278, 165
+        Delay 281
         LeftDown 1
-        Delay 16
+        Delay 12
         LeftClick 1
         Delay 1
         LeftUp 1
-        MoveTo 635, 316
-        Delay 1400
+        MoveTo 650, 315
+        Delay 1080
         LeftDown 1
-        Delay 2
+        Delay 5
         LeftClick 1
         Delay 1
         LeftUp 1
-        MoveTo 1070, 681
+        MoveTo 1121, 677
         Delay 783
         LeftDown 1
-        Delay 2
+        Delay 3
         LeftClick 1
         Delay 1
         LeftUp 1
         '==========以上是按鍵精靈錄製的內容==========
     End If
 Loop Until intX > 0 And intY > 0
+Call GO_W()
+Call GO_S()
+Delay 2000
+Call GO_S()
+Call GO_W()
+Call GO_RED_N()
+Delay 2000
+Call GO_RED_N()
+Call GO_E()
 MessageBox "END"

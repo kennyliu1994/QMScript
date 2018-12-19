@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=bef95b7c-e933-46f1-af8f-c9edc99fd1ce
 Description=N8S-4
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
