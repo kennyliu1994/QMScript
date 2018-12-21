@@ -32,4 +32,4 @@ Sub Ä_½c()
 End Sub
 Do
     Call Ä_½c()
-Loop Until BoxX > 0 And BoxY > 0
+Loop 

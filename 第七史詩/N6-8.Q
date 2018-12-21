@@ -67,7 +67,7 @@ End Sub
 Sub GO_S()
     Do
         Call 寶箱()
-        FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.4,intX,intY
+        FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.2,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 718
