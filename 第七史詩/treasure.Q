@@ -30,6 +30,14 @@ Sub Ä_½c()
         LeftClick 1
     End If
 End Sub
+Sub ­ô¥¬ªL()
+    FindPic 116,366,1802,635,"D:\«öÁäºëÆF2014\screen\epic7_4-4\­ô¥¬ªL.bmp",0.2,intX,intY
+    If intX > 0 And intY > 0 Then 
+        MoveTo intX + 51, intY +110
+        LeftClick 1
+    End If
+End Sub
 Do
     Call Ä_½c()
+    Call ­ô¥¬ªL()
 Loop 
