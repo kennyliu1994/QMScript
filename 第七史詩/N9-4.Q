@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=e20dfc01-6418-4b2a-94b5-7e6778818957
 Description=N9-4
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -69,7 +69,7 @@ Call Lib.第七史詩.GO_RED_N()
 Call Lib.第七史詩.GO_E()
 Delay 1000
 Do
-    Call 寶箱()
+    Call Lib.第七史詩.寶箱()
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
@@ -100,7 +100,7 @@ Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_W()
 Call Lib.第七史詩.GO_RED_N()
 Do
-    Call 寶箱()
+    Call Lib.第七史詩.寶箱()
     FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
