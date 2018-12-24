@@ -24,7 +24,8 @@ SetupOCXFile=
 
 [Script]
 Sub Ä_½c()
-    FindPic 151,468,1764,664,"D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp",0.6,BoxX,BoxY
+    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.6, BoxX, BoxY
+    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.6, BoxX, BoxY
     If BoxX > 0 And BoxY > 0 Then 
         MoveTo BoxX + 65, BoxY + 43
         LeftClick 1
@@ -39,5 +40,4 @@ Sub ­ô¥¬ªL()
 End Sub
 Do
     Call Ä_½c()
-    Call ­ô¥¬ªL()
 Loop 

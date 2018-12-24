@@ -24,7 +24,6 @@ SetupOCXFile=
 特殊提醒迴路
 信徒
 
-
 [Script]
 Sub 戰鬥()
     Do 
