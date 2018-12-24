@@ -21,6 +21,7 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
+野生植物
 
 [Script]
 Call Lib.第七史詩.戰鬥()
