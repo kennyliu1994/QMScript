@@ -10,7 +10,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 Description=N5S-8
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
