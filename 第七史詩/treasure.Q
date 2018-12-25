@@ -8,7 +8,7 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=646abc4a-3d88-49e4-b935-487f09161f10
+MacroID=ec1a0359-be11-4f84-9ee6-4194c0921143
 Description=treasure
 Enable=1
 AutoRun=0
@@ -23,4 +23,10 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Call Lib.²Ä¤C¥v¸Ö.Ä_½c()
+Do
+    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.3, BoxX, BoxY    
+    If BoxX > 0 And BoxY > 0 Then 
+        MoveTo BoxX + 65, BoxY + 43
+        LeftClick 2
+    End If
+Loop
