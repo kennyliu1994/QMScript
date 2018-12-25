@@ -24,9 +24,5 @@ SetupOCXFile=
 
 [Script]
 Do
-    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.3, BoxX, BoxY    
-    If BoxX > 0 And BoxY > 0 Then 
-        MoveTo BoxX + 65, BoxY + 43
-        LeftClick 2
-    End If
+    Call Lib.²Ä¤C¥v¸Ö.Ä_½c()
 Loop
