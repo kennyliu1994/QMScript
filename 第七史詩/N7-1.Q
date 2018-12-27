@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=9891b6cc-97d8-4daf-a488-c83aee60c182
 Description=N7-1
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -60,5 +60,34 @@ Do
 Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_S()
 Call Lib.第七史詩.GO_E()
-Call Lib.第七史詩.GO_RED_N()
+Delay 1000
+Do
+    Call Lib.第七史詩.寶箱()
+    FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
+    If intX > 0 And intY > 0 Then 
+        '==========以下是按鍵精靈錄製的內容==========
+        MoveTo 304, 160
+        Delay 303
+        LeftDown 1
+        Delay 14
+        LeftClick 1
+        Delay 2
+        LeftUp 1
+        MoveTo 620, 350
+        Delay 1790
+        LeftDown 1
+        Delay 3
+        LeftClick 1
+        Delay 1
+        LeftUp 1
+        MoveTo 1059, 673
+        Delay 831
+        LeftDown 1
+        Delay 2
+        LeftClick 1
+        Delay 2
+        LeftUp 1
+        '==========以上是按鍵精靈錄製的內容==========
+    End If
+Loop Until intX > 0 And intY > 0
 MessageBox "END"
