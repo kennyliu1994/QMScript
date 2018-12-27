@@ -101,9 +101,11 @@ Sub GO_S()
     Loop Until intX > 0 And intY > 0
 End Sub
 Sub Ä_½c()
+    Rem again
     FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.5, BoxX, BoxY    
     If BoxX > 0 And BoxY > 0 Then 
         MoveTo BoxX + 65, BoxY + 43
-        LeftClick 2
+        LeftClick 1
+        Goto again
     End If
 End Sub
