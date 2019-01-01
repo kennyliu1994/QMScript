@@ -32,7 +32,7 @@ End Sub
 Sub GO_E()
     Do
         Call 寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.4,intX,intY
+        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.5,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 378
@@ -43,6 +43,7 @@ Sub GO_E()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
+            Delay 1000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -63,6 +64,7 @@ Sub GO_RED_N()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
+            Delay 1000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -80,6 +82,7 @@ Sub GO_W()
             Delay 2
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
+            Delay 1000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -97,6 +100,7 @@ Sub GO_S()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
+            Delay 1000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
