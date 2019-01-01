@@ -25,8 +25,9 @@ SetupOCXFile=
 永恆森林的塵埃
 
 [Script]
-//Call Lib.第七史詩.戰鬥()
+Call Lib.第七史詩.戰鬥()
 Call Lib.第七史詩.GO_E()
+Delay 2000
 Do
     Call Lib.第七史詩.寶箱()
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
