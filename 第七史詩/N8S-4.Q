@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=bef95b7c-e933-46f1-af8f-c9edc99fd1ce
 Description=N8S-4
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -27,7 +27,7 @@ SetupOCXFile=
 Call Lib.第七史詩.戰鬥()
 Do
     Call Lib.第七史詩.寶箱()
-    FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.4,intX,intY
+    FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.5,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
         MoveTo 283, 154
@@ -55,17 +55,15 @@ Do
     End If
 Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_S()
-Delay 1000
 Call Lib.第七史詩.GO_S()
 Call Lib.第七史詩.GO_E()
 Call Lib.第七史詩.GO_S()
 Call Lib.第七史詩.GO_RED_N()
-Delay 1000
 Call Lib.第七史詩.GO_RED_N()
 //Call Lib.第七史詩.GO_W()
 Do
     Call Lib.第七史詩.寶箱()
-    FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.4,intX,intY
+    FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.5,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
         MoveTo 261, 158
