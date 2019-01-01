@@ -36,7 +36,7 @@ Sub GO_E()
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 378
-            Delay 844
+            Delay 444
             LeftDown 1
             Delay 4
             LeftClick 1
