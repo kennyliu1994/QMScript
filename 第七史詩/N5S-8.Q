@@ -1,7 +1,6 @@
 [General]
-MacroID=2b6793c6-a06c-4180-a5d4-327b6b59148b
 SyntaxVersion=2
-BeginHotkey=20
+BeginHotkey=123
 BeginHotkeyMod=0
 PauseHotkey=0
 PauseHotkeyMod=0
@@ -9,6 +8,7 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
+MacroID=2b6793c6-a06c-4180-a5d4-327b6b59148b
 Description=N5S-8
 Enable=0
 AutoRun=0
