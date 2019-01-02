@@ -22,6 +22,10 @@ QUI=
 SetupOCXFile=
 [Comment]
 頂級犬齒
+"無名的
+光彩"
+"盾牌騎士團
+信物"
 
 [Script]
 Call Lib.第七史詩.戰鬥()
