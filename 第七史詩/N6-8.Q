@@ -9,8 +9,8 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=7cc98968-d3ff-4501-8c19-d8594e105f5f
-Description=N6-8
-Enable=0
+Description=³»¯Å¤ü¾¦
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -21,7 +21,6 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
-³»¯Å¤ü¾¦
 
 [Script]
 Call Lib.²Ä¤C¥v¸Ö.¾Ô°«()

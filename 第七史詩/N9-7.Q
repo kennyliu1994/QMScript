@@ -9,8 +9,8 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
-Description=N9-7
-Enable=0
+Description=人造生物
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -21,7 +21,6 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
-人造生物
 
 [Script]
 Call Lib.第七史詩.戰鬥()

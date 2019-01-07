@@ -9,8 +9,8 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=2b6793c6-a06c-4180-a5d4-327b6b59148b
-Description=N5S-8
-Enable=0
+Description=次元龜裂
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -21,7 +21,6 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
-次元龜裂
 
 [Script]
 Call Lib.第七史詩.戰鬥()

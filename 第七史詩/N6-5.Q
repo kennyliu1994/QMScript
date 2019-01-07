@@ -9,8 +9,8 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=295ab1fe-ed8b-4ea1-83c6-025d58120003
-Description=N6-5
-Enable=0
+Description=頂級犬齒 無名的光彩 盾牌騎士團信物
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -21,11 +21,6 @@ QUI=
 [Relative]
 SetupOCXFile=
 [Comment]
-頂級犬齒
-"無名的
-光彩"
-"盾牌騎士團
-信物"
 
 [Script]
 Call Lib.第七史詩.戰鬥()
