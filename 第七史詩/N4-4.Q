@@ -26,8 +26,8 @@ SetupOCXFile=
 [Script]
 Sub GO_E()
     Do
-        Call 寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.2,intX,intY
+        Call Lib.第七史詩.寶箱()
+        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\4-4E.bmp",0.5,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 378
@@ -141,4 +141,4 @@ Do
         Delay 1000
     End If
 Loop Until intX > 0 And intY > 0
-MsgBox "END"
+MessageBox "END"
