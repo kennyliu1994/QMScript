@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
 Description=人造生物
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0

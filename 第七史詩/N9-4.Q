@@ -53,7 +53,7 @@ Do
         Delay 2
         LeftUp 1
         MoveTo 1679, 91
-        Delay 2000
+        Delay 4000
         LeftDown 1
         Delay 2
         LeftClick 1
