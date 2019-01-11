@@ -24,65 +24,46 @@ SetupOCXFile=
 
 [Script]
 Do
-    FindPic 936,898,986,929,"D:\按鍵精靈2014\screen\destiny\100%.bmp",0.9,intX,intY
-    If intX > 0 And intY > 0 Then 
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 1165, 880
-        Delay 318
-        LeftDown 1
-        Delay 22
-        LeftClick 1
-        Delay 3
-        LeftUp 1
-        MoveTo 960, 864
-        Delay 1100
-        LeftDown 1
-        Delay 4
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容==========
-    End If
-Loop Until intX > 0 And intY > 0
-Do
-    FindPic 936,898,986,929,"D:\按鍵精靈2014\screen\destiny\100%.bmp",0.9,intX,intY
-    If intX > 0 And intY > 0 Then 
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 1057, 855
-        Delay 318
-        LeftDown 1
-        Delay 22
-        LeftClick 1
-        Delay 3
-        LeftUp 1
-        MoveTo 960, 864
-        Delay 1100
-        LeftDown 1
-        Delay 4
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容==========
-    End If
-Loop Until intX > 0 And intY > 0
-Do
-    FindPic 936,898,986,929,"D:\按鍵精靈2014\screen\destiny\100%.bmp",0.9,intX,intY
-    If intX > 0 And intY > 0 Then 
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 1165, 880
-        Delay 318
-        LeftDown 1
-        Delay 22
-        LeftClick 1
-        Delay 3
-        LeftUp 1
-        MoveTo 960, 864
-        Delay 1100
-        LeftDown 1
-        Delay 4
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容==========
-    End If
-Loop Until intX > 0 And intY > 0
+    Do
+        FindPic 936,898,986,929,"D:\按鍵精靈2014\screen\destiny\100%.bmp",0.9,intX,intY
+        If intX > 0 And intY > 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 1165, 880
+            Delay 318
+            LeftDown 1
+            Delay 22
+            LeftClick 1
+            Delay 3
+            LeftUp 1
+            MoveTo 960, 864
+            Delay 1100
+            LeftDown 1
+            Delay 4
+            LeftClick 1
+            Delay 2
+            LeftUp 1
+            '==========以上是按鍵精靈錄製的內容==========
+        End If
+    Loop Until intX > 0 And intY > 0
+    Do
+        FindPic 936,898,986,929,"D:\按鍵精靈2014\screen\destiny\100%.bmp",0.9,intX,intY
+        If intX > 0 And intY > 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 1057, 855
+            Delay 318
+            LeftDown 1
+            Delay 22
+            LeftClick 1
+            Delay 3
+            LeftUp 1
+            MoveTo 960, 864
+            Delay 1100
+            LeftDown 1
+            Delay 4
+            LeftClick 1
+            Delay 2
+            LeftUp 1
+            '==========以上是按鍵精靈錄製的內容==========
+        End If
+    Loop Until intX > 0 And intY > 0
+Loop
