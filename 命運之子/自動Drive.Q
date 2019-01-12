@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=56673962-640e-409c-bced-31d4a0cb3c06
 Description=¦Û°ÊDrive
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
