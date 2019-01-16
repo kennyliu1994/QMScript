@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=c6e585ba-a5cb-419c-8c13-b71c852275ab
 Description=¥ÛÀY¤H9
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -57,4 +57,4 @@ Do
             LeftClick 1
         End If
     Loop Until intX > 0 And intY > 0
-Loop  
+Loop
