@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=e20dfc01-6418-4b2a-94b5-7e6778818957
 Description=特殊提醒迴路 信徒
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -101,6 +101,9 @@ Do
     Call Lib.第七史詩.寶箱()
     FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
+        MoveTo 947, 529
+        Delay 1000
+        LeftClick 1
         '==========以下是按鍵精靈錄製的內容==========
         MoveTo 310, 157
         Delay 376
