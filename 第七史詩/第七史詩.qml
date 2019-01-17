@@ -34,6 +34,9 @@ Sub GO_E()
         Call 寶箱()
         FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.5,intX,intY
         If intX > 0 And intY > 0 Then 
+            MoveTo 1679, 90
+            Delay 1000
+            LeftClick 1
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 378
             Delay 444
@@ -52,6 +55,9 @@ Sub GO_RED_N()
         Call 寶箱()
         FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
+            MoveTo 1679, 90
+            Delay 1000
+            LeftClick 1
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 282, 373
             Delay 388
@@ -73,6 +79,9 @@ Sub GO_W()
         Call 寶箱()
         FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
+            MoveTo 1679, 90
+            Delay 1000
+            LeftClick 1
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 288, 711
             Delay 464
@@ -91,6 +100,9 @@ Sub GO_S()
         Call 寶箱()
         FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
+            MoveTo 1679, 90
+            Delay 1000
+            LeftClick 1
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 718
             Delay 492
