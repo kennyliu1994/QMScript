@@ -70,6 +70,9 @@ Do
     Call Lib.第七史詩.寶箱()
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
+        MoveTo 947, 529
+        Delay 1000
+        LeftClick 1
         '==========以下是按鍵精靈錄製的內容==========
         MoveTo 315, 157
         Delay 408
