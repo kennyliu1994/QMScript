@@ -191,6 +191,39 @@ Sub GO_S_CLICK()
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
+Sub CLEAR()
+    Do
+        Call Ä_½c()
+        FindPic 911,238,1001,356,"D:\«öÁäºëÆF2014\screen\epic7_4-4\CLEAR.bmp",0.9,intX,intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo 1665, 915
+            Delay 1000
+            LeftClick 1
+        End If
+    Loop Until intX > 0 And intY > 0
+End Sub
+Sub ½T»{()
+    Do
+        FindPic 1599,891,1672,938,"D:\«öÁäºëÆF2014\screen\epic7_4-4\½T»{.bmp",0.9,intX,intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo 1638, 913
+            Delay 1000
+            LeftClick 1
+            Delay 2000
+            LeftClick 1
+        End If
+    Loop Until intX > 0 And intY > 0
+End Sub
+Sub ¿ï¾Ü¶¤¥î()
+    Do
+        FindPic 1289,864,1417,912,"D:\«öÁäºëÆF2014\screen\epic7_4-4\¿ï¾Ü¶¤¥î.bmp",0.3,intX,intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo 1352, 888
+            Delay 1000
+            LeftClick 1
+        End If
+    Loop Until intX > 0 And intY > 0
+End Sub
 Sub Ä_½c()
     Rem again
     FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.5, BoxX, BoxY    
@@ -200,3 +233,4 @@ Sub Ä_½c()
         Goto again
     End If
 End Sub
+    
