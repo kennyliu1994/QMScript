@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=e20dfc01-6418-4b2a-94b5-7e6778818957
 Description=特殊提醒迴路 信徒
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
