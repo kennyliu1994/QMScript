@@ -35,7 +35,7 @@ Do
             LeftClick 1
             Delay 3
             LeftUp 1
-            MoveTo 960, 864
+            MoveTo 960, 933
             Delay 1100
             LeftDown 1
             Delay 4
@@ -56,7 +56,7 @@ Do
             LeftClick 1
             Delay 3
             LeftUp 1
-            MoveTo 960, 864
+            MoveTo 960, 933
             Delay 1100
             LeftDown 1
             Delay 4
