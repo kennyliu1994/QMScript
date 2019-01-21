@@ -8,7 +8,7 @@ MacroID=44e32598-92e9-45b5-abee-32a4ef80468d
 //寫完保存後，在任一命令庫上點擊右鍵並選擇“刷新”即可
 Sub 戰鬥()
     Do 
-        FindPic 1347,837,1513,943,"D:\按鍵精靈2014\screen\epic7_4-4\戰鬥開始.bmp",0.6,intX,intY
+        FindPic 1361,865,1488,914,"D:\按鍵精靈2014\screen\epic7_4-4\戰鬥開始.bmp",0.3,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1399, 896
