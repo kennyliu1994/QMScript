@@ -61,7 +61,7 @@ Call Lib.第七史詩.GO_W_CLICK()
 Call Lib.第七史詩.GO_RED_N_CLICK()
 Do
     Call Lib.第七史詩.寶箱()
-    FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.4,intX,intY
+    FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.3,intX,intY
     If intX > 0 And intY > 0 Then 
         MessageBox "END"
         Delay 1000
