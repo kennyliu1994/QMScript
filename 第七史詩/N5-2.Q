@@ -57,10 +57,10 @@ Do
 Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_W()
 Call Lib.第七史詩.GO_S()
-Call Lib.第七史詩.GO_S()
+Call Lib.第七史詩.GO_S_CLICK()
 Call Lib.第七史詩.GO_W()
-Call Lib.第七史詩.GO_RED_N()
-Call Lib.第七史詩.GO_RED_N()
-Call Lib.第七史詩.GO_E()
-Call Lib.第七史詩.GO_E()
+Call Lib.第七史詩.GO_RED_N_CLICK()
+Call Lib.第七史詩.GO_RED_N_CLICK()
+Call Lib.第七史詩.GO_E_CLICK()
+Call Lib.第七史詩.GO_E_CLICK()
 MessageBox "END"

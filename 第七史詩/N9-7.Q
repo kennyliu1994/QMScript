@@ -23,10 +23,31 @@ SetupOCXFile=
 [Comment]
 
 [Script]
+Sub GO_E_CLICK()
+    Do
+        Call Lib.第七史詩.寶箱()
+        FindPic 1588,340,1672,422,"D:\按鍵精靈2014\screen\epic7_4-4\E2.bmp",0.4,intX,intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo 947, 529
+            Delay 1000
+            LeftClick 1
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 1632, 378
+            Delay 444
+            LeftDown 1
+            Delay 4
+            LeftClick 1
+            Delay 1
+            LeftUp 1
+            '==========以上是按鍵精靈錄製的內容==========
+            Delay 1000
+        End If
+    Loop Until intX > 0 And intY > 0
+End Sub
 Call Lib.第七史詩.戰鬥()
-Call Lib.第七史詩.GO_E()
-Call Lib.第七史詩.GO_S()
-Call Lib.第七史詩.GO_E()
+Call GO_E_CLICK()
+Call Lib.第七史詩.GO_S_CLICK()
+Call GO_E_CLICK()
 Do
     Call Lib.第七史詩.寶箱()
     FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
@@ -59,7 +80,7 @@ Do
     End If
 Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_RED_N()
-Call Lib.第七史詩.GO_W()
+Call Lib.第七史詩.GO_W_CLICK()
 Do
     Call Lib.第七史詩.寶箱()
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
