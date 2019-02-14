@@ -27,7 +27,7 @@ Call Lib.第七史詩.戰鬥()
 Do
     FindPic 120,804,314,996,"D:\按鍵精靈2014\screen\epic7_4-4\藥水.bmp",0.9,intX,intY
     If intX > 0 And intY > 0 Then 
-        MoveTo 1679, 90
+        MoveTo 1600, 90
         Delay 1000
         LeftClick 1
         '==========以下是按鍵精靈錄製的內容==========
@@ -52,7 +52,7 @@ Do
         LeftClick 1
         Delay 2
         LeftUp 1
-        MoveTo 1679, 91
+        MoveTo 1600, 91
         Delay 4000
         LeftDown 1
         Delay 2
