@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=bef95b7c-e933-46f1-af8f-c9edc99fd1ce
 Description=史萊姆
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -54,11 +54,11 @@ Do
     End If
 Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_S()
-Call Lib.第七史詩.GO_S()
-Call Lib.第七史詩.GO_E()
+Call Lib.第七史詩.GO_S_CLICK()
+Call Lib.第七史詩.GO_E_CLICK()
 Call Lib.第七史詩.GO_S()
 Call Lib.第七史詩.GO_RED_N()
-Call Lib.第七史詩.GO_RED_N()
+Call Lib.第七史詩.GO_RED_N_CLICK()
 //Call Lib.第七史詩.GO_W()
 Do
     Call Lib.第七史詩.寶箱()
