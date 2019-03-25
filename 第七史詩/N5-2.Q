@@ -30,24 +30,24 @@ Do
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 278, 165
-        Delay 281
+        MoveTo 305, 155
+        Delay 311
         LeftDown 1
         Delay 12
         LeftClick 1
         Delay 1
         LeftUp 1
-        MoveTo 650, 315
-        Delay 1080
+        MoveTo 642, 319
+        Delay 1119
         LeftDown 1
-        Delay 5
+        Delay 2
         LeftClick 1
         Delay 1
         LeftUp 1
-        MoveTo 1121, 677
-        Delay 783
+        MoveTo 1069, 687
+        Delay 704
         LeftDown 1
-        Delay 3
+        Delay 1
         LeftClick 1
         Delay 1
         LeftUp 1
