@@ -199,12 +199,15 @@ Sub CLEAR()
             MoveTo 1665, 915
             Delay 1000
             LeftClick 1
+            MoveTo 861, 694
+            Delay 3000
+            LeftClick 1
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
 Sub 確認()
     Do
-        FindPic 1599,891,1672,938,"D:\按鍵精靈2014\screen\epic7_4-4\確認.bmp",0.9,intX,intY
+        FindPic 1599,891,1672,938,"D:\按鍵精靈2014\screen\epic7_4-4\確認.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
             MoveTo 1638, 913
             Delay 1000
