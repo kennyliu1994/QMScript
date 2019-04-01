@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=7d3ec21f-f638-41ad-857d-d7b0842c73de
 Description=榮耀的戒指 塔拉諾爾
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -25,7 +25,7 @@ SetupOCXFile=
 [Script]
 Call Lib.第七史詩.戰鬥()
 Do
-    Call 寶箱()
+    Call Lib.第七史詩.寶箱()
     FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
     If intX > 0 And intY > 0 Then 
         MoveTo 947, 529
@@ -78,7 +78,7 @@ Do
     End If
 Loop Until intX > 0 And intY > 0
 Do
-    Call 寶箱()
+    Call Lib.第七史詩.寶箱()
     FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
@@ -127,7 +127,7 @@ Do
     End If
 Loop Until intX > 0 And intY > 0
 Do
-    Call 寶箱()
+    Call Lib.第七史詩.寶箱()
     FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.3,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
@@ -143,7 +143,7 @@ Do
     End If
 Loop Until intX > 0 And intY > 0
 Do
-    Call 寶箱()
+    Call Lib.第七史詩.寶箱()
     FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
