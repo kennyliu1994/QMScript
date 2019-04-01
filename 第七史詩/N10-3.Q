@@ -101,10 +101,10 @@ Do
         Delay 1000
         LeftClick 1
         '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 283, 147
-        Delay 385
+        MoveTo 298, 157
+        Delay 340
         LeftDown 1
-        Delay 9
+        Delay 1
         LeftClick 1
         Delay 1
         LeftUp 1
