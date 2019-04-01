@@ -1,5 +1,4 @@
 [General]
-MacroID=5dd314f7-8d16-488c-9020-a4e07b7b1956
 SyntaxVersion=2
 BeginHotkey=119
 BeginHotkeyMod=0
@@ -9,6 +8,7 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
+MacroID=5dd314f7-8d16-488c-9020-a4e07b7b1956
 Description=Ä_½c
 Enable=0
 AutoRun=0
