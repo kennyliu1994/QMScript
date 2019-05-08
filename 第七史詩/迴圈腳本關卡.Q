@@ -116,14 +116,23 @@ Sub 迴圈肥料()
             '==========以上是按鍵精靈錄製的內容==========
         End If
     Loop Until intX > 0 And intY > 0
+    Delay 9000
+    MoveTo 965, 582
+    LeftClick 1
+    Delay 1000
+    MoveTo 1095, 676
+    LeftClick 1
 End Sub
 i = inputbox("迴圈幾次", "提示")
+Call 迴圈肥料()
 For i - 1
-    Call 迴圈肥料()
     Call Lib.第七史詩.CLEAR()
     Call Lib.第七史詩.確認()
+    Delay 5000
+    MoveTo 1490, 914
+    LeftClick 1
     Call Lib.第七史詩.選擇隊伍()
+    Call 迴圈肥料()
 Next
-Call Lib.第七史詩.戰鬥()
 Call Lib.第七史詩.CLEAR()
 MessageBox "END"
