@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=ec1a0359-be11-4f84-9ee6-4194c0921143
-Description=迴圈一般關卡
+Description=迴圈選擇好友
 Enable=0
 AutoRun=0
 [Repeat]
