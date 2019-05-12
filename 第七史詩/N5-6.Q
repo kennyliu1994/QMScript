@@ -30,29 +30,27 @@ Do
     FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
     If intX > 0 And intY > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 257, 153
-        Delay 316
-        LeftDown 1
-        Delay 25
+        MoveTo 303, 166
+        Delay 377
         LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 496, 467
-        Delay 1148
+        MoveTo 480, 453
+        Delay 1239
         LeftDown 1
         Delay 2
         LeftClick 1
         Delay 1
         LeftUp 1
-        MoveTo 1115, 677
-        Delay 767
+        MoveTo 1077, 695
+        Delay 958
         LeftDown 1
         Delay 2
-        LeftClick 1
-        Delay 1
+        LeftDown 1
+        MoveTo 1078, 696
+        Delay 110
+        LeftUp 1
+        Delay 2
         LeftUp 1
         '==========以上是按鍵精靈錄製的內容==========
-        Delay 1000
     End If
 Loop Until intX > 0 And intY > 0
 Call Lib.第七史詩.GO_E()
