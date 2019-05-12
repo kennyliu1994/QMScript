@@ -212,6 +212,10 @@ Sub ½T»{()
             MoveTo 1638, 913
             Delay 1000
             LeftClick 1
+            MoveTo 829, 727
+            Delay 1000
+            LeftClick 1
+            MoveTo 1638, 913
             Delay 2000
             LeftClick 1
         End If
@@ -229,7 +233,7 @@ Sub ¿ï¾Ü¶¤¥î()
 End Sub
 Sub Ä_½c()
     Rem again
-    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.5, BoxX, BoxY    
+    FindPic 151, 468, 1764, 664, "D:\«öÁäºëÆF2014\screen\epic7_4-4\Ä_½c.bmp", 0.4, BoxX, BoxY    
     If BoxX > 0 And BoxY > 0 Then 
         MoveTo BoxX + 65, BoxY + 43
         LeftClick 1
