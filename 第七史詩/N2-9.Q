@@ -8,9 +8,9 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=798bf2e3-008a-4a07-8f39-f3b3846baf90
-Description=鈴鐺鼠部落29迴圈
-Enable=0
+MacroID=7310245f-61fc-47cc-89c0-a41f8083fdf9
+Description=機械18迴圈
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -26,8 +26,8 @@ SetupOCXFile=
 Sub GO_E()
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E2.bmp",0.5,intX,intY
-        If intX > 0 And intY > 0 Then 
+        FindPic 1593,346,1671,416,"D:\按鍵精靈2014\screen\epic7_4-4\E_N2-9.bmp",0.8,intX,intY
+        If intX> 0 And intY> 0 Then
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 378
             Delay 444
@@ -41,31 +41,63 @@ Sub GO_E()
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
-Sub 鈴鐺鼠部落()
+Sub GO_W()
+    Do
+        Call Lib.第七史詩.寶箱()
+        FindPic 249,682,331,755,"D:\按鍵精靈2014\screen\epic7_4-4\W_N2-9.bmp",0.7,intX,intY
+        If intX > 0 And intY > 0 Then 
+            Delay 2000
+            MoveTo 965, 582
+            LeftClick 1
+            Delay 1000
+            MoveTo 1095, 676
+            LeftClick 1
+        End If
+    Loop Until intX > 0 And intY > 0
+End Sub
+Sub 機械
     Call Lib.第七史詩.戰鬥()
+    Call GO_E()
+    Call GO_W()
+    Call Lib.第七史詩.GO_E_CLICK()
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
+        FindPic 249,682,331,755,"D:\按鍵精靈2014\screen\epic7_4-4\W_N2-9.bmp",0.7,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 237, 146
-            Delay 374
-            LeftDown 1
-            Delay 15
+            MoveTo 285, 162
+            Delay 251
             LeftClick 1
-            Delay 2
-            LeftUp 1
-            MoveTo 463, 492
-            Delay 1150
+            MoveTo 250, 427
+            Delay 1221
             LeftDown 1
             Delay 2
             LeftClick 1
             Delay 1
             LeftUp 1
-            MoveTo 1102, 665
-            Delay 791
+            MoveTo 1063, 684
+            Delay 935
             LeftDown 1
             Delay 2
+            LeftClick 1
+            Delay 2
+            LeftUp 1
+            '==========以上是按鍵精靈錄製的內容==========
+        End If
+    Loop Until intX > 0 And intY > 0
+    Call Lib.第七史詩.GO_S()
+    Do
+        Call Lib.第七史詩.寶箱()
+        FindPic 249,682,331,755,"D:\按鍵精靈2014\screen\epic7_4-4\W_N2-9.bmp",0.7,intX,intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo 947, 529
+            Delay 1000
+            LeftClick 1
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 288, 711
+            Delay 464
+            LeftDown 1
+            Delay 17
             LeftClick 1
             Delay 2
             LeftUp 1
@@ -73,66 +105,34 @@ Sub 鈴鐺鼠部落()
             Delay 1000
         End If
     Loop Until intX > 0 And intY > 0
-    Call GO_E()
-    Call Lib.第七史詩.GO_S()
-    Call Lib.第七史詩.GO_S()
+    Call Lib.第七史詩.GO_S_CLICK()
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
+        FindPic 1593,346,1671,416,"D:\按鍵精靈2014\screen\epic7_4-4\E_N2-9.bmp",0.8,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 266, 165
-            Delay 281
+            MoveTo 310, 152
+            Delay 332
             LeftClick 1
-            MoveTo 600, 585
-            Delay 993
-            LeftDown 1
-            Delay 1
-            LeftDown 1
-            MoveTo 600, 586
-            Delay 125
-            LeftUp 1
-            Delay 1
-            LeftUp 1
-            MoveTo 1029, 682
-            Delay 655
+            MoveTo 603, 77
+            Delay 1588
             LeftDown 1
             Delay 2
             LeftClick 1
+            Delay 1
+            LeftUp 1
+            MoveTo 1141, 687
+            Delay 839
+            LeftDown 1
             Delay 2
+            LeftClick 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
             Delay 1000
         End If
     Loop Until intX > 0 And intY > 0
-    Call Lib.第七史詩.GO_RED_N()
-    Call GO_E()
     Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
-            '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 264, 159
-            LeftClick 1
-            MoveTo 717, 685
-            Delay 1215
-            LeftDown 1
-            Delay 3
-            LeftClick 1
-            Delay 2
-            LeftUp 1
-            MoveTo 1079, 708
-            Delay 956
-            LeftDown 1
-            Delay 3
-            LeftClick 1
-            Delay 2
-            LeftUp 1
-            '==========以上是按鍵精靈錄製的內容==========
-        End If
-    Loop Until intX > 0 And intY > 0
-    Do
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
+        FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
             Delay 3000
             MoveTo 965, 582
@@ -144,7 +144,7 @@ Sub 鈴鐺鼠部落()
     Loop Until intX > 0 And intY > 0
 End Sub
 i = inputbox("迴圈幾次", "提示")
-Call 鈴鐺鼠部落()
+Call 機械()
 For i - 1
     Call Lib.第七史詩.CLEAR()
     Call Lib.第七史詩.確認()
@@ -152,7 +152,7 @@ For i - 1
     MoveTo 1490, 914
     LeftClick 1
     Call Lib.第七史詩.選擇隊伍()
-    Call 鈴鐺鼠部落()
+    Call 機械()
 Next
 Call Lib.第七史詩.CLEAR()
 MessageBox "END"
