@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=55343fdd-1ca5-407e-a1f0-941deddeb16f
 Description=迴圈不選擇好友
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
