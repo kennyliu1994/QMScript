@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=0939e4ba-b8fb-4479-ab99-eab1c11d36f7
 Description=肥料+親密度迴圈
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -88,7 +88,7 @@ Sub 迴圈肥料()
     Loop Until intX > 0 And intY > 0
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 1598,680,1660,748,"D:\按鍵精靈2014\screen\epic7_4-4\S_N3-1.bmp",0.5,intX,intY
+        FindPic 1598,680,1660,748,"D:\按鍵精靈2014\screen\epic7_4-4\S_N3-1.bmp",0.4,intX,intY
         If intX> 0 And intY> 0 Then
             Delay 1000
             '==========以下是按鍵精靈錄製的內容==========
