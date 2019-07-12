@@ -62,14 +62,6 @@ Sub Åì¯¾³¡¸¨
         Call Lib.²Ä¤C¥v¸Ö.Ä_½c()
         FindPic 149,275,379,459,"D:\«öÁäºëÆF2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
-            MessageBox "END"
-            Delay 1000
-        End If
-    Loop Until intX > 0 And intY > 0
-    Do
-        Call Lib.²Ä¤C¥v¸Ö.Ä_½c()
-        FindPic 149,275,379,459,"D:\«öÁäºëÆF2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
             Delay 3000
             MoveTo 965, 582
             LeftClick 1
