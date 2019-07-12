@@ -90,8 +90,8 @@ Sub 地獄迷宮右上
     Call Lib.第七史詩.GO_RED_N()
     MessageBox "關技能"
 End Sub
-//Call 普通1右下左上()
+Call 普通1右下左上()
 //Call 普通迷宮2右上左下()
-Call 普通迷宮3女王左上()
+//Call 普通迷宮3女王左上()
 //Call 地獄迷宮左上()
 //Call 地獄迷宮右上()
