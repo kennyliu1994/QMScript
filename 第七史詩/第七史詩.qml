@@ -43,7 +43,7 @@ Sub GO_E()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -64,14 +64,14 @@ Sub GO_RED_N()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
 Sub GO_W()
     Do
         Call 寶箱()
-        FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
+        FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.5,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 288, 711
@@ -82,14 +82,14 @@ Sub GO_W()
             Delay 2
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
 Sub GO_S()
     Do
         Call 寶箱()
-        FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.4,intX,intY
+        FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.5,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 1632, 718
@@ -100,7 +100,7 @@ Sub GO_S()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -121,7 +121,7 @@ Sub GO_E_CLICK()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -145,7 +145,7 @@ Sub GO_RED_N_CLICK()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -166,7 +166,7 @@ Sub GO_W_CLICK()
             Delay 2
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
@@ -187,7 +187,7 @@ Sub GO_S_CLICK()
             Delay 1
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
+            Delay 2000
         End If
     Loop Until intX > 0 And intY > 0
 End Sub

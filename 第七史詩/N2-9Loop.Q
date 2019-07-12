@@ -41,28 +41,29 @@ Sub GO_E()
         End If
     Loop Until intX > 0 And intY > 0
 End Sub
-Sub GO_W()
-    Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 249,682,331,755,"D:\按鍵精靈2014\screen\epic7_4-4\W_N2-9.bmp",0.7,intX,intY
-        If intX > 0 And intY > 0 Then 
-            Delay 2000
-            MoveTo 965, 582
-            LeftClick 1
-            Delay 1000
-            MoveTo 1095, 676
-            LeftClick 1
-        End If
-    Loop Until intX > 0 And intY > 0
-End Sub
 Sub 機械
     Call Lib.第七史詩.戰鬥()
     Call GO_E()
-    Call GO_W()
+    Do
+        Call Lib.第七史詩.寶箱()
+        FindPic 249,686,326,751,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo 947, 529
+            Delay 1000
+            LeftClick 1
+            MoveTo 1071, 677
+            Delay 1087
+            LeftDown 1
+            Delay 3
+            LeftClick 1
+            Delay 1
+            LeftUp 1
+        End If
+    Loop Until intX > 0 And intY > 0
     Call Lib.第七史詩.GO_E_CLICK()
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 249,682,331,755,"D:\按鍵精靈2014\screen\epic7_4-4\W_N2-9.bmp",0.7,intX,intY
+        FindPic 249,686,326,751,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 285, 162
@@ -88,7 +89,7 @@ Sub 機械
     Call Lib.第七史詩.GO_S()
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 249,682,331,755,"D:\按鍵精靈2014\screen\epic7_4-4\W_N2-9.bmp",0.7,intX,intY
+        FindPic 249,686,326,751,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
         If intX > 0 And intY > 0 Then 
             MoveTo 947, 529
             Delay 1000

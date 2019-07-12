@@ -8,9 +8,9 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=c78e2659-cada-4b10-8952-9de7ebc13f05
-Description=不死生物21迴圈
-Enable=0
+MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
+Description=人造生物27迴圈
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -23,75 +23,72 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Sub 不死生物
+Sub 人造生物
     Call Lib.第七史詩.戰鬥()
+    Call Lib.第七史詩.GO_E_CLICK()
     Call Lib.第七史詩.GO_S_CLICK()
-    Call Lib.第七史詩.GO_W_CLICK()
+    Call Lib.第七史詩.GO_E_CLICK()
     Do
         Call Lib.第七史詩.寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.5,intX,intY
+        FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 317, 153
-            Delay 345
+            MoveTo 264, 161
+            Delay 317
             LeftDown 1
-            Delay 25
+            Delay 9
+            LeftDown 1
+            Delay 30
             LeftClick 1
             Delay 2
             LeftUp 1
-            MoveTo 999, 310
-            Delay 1358
+            MoveTo 410, 827
+            Delay 1229
             LeftDown 1
-            Delay 2
-            LeftClick 1
-            Delay 2
-            LeftUp 1
-            MoveTo 1083, 678
-            Delay 782
-            LeftDown 1
-            Delay 2
-            LeftClick 1
-            Delay 2
-            LeftUp 1
-            '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
-        End If
-    Loop Until intX > 0 And intY > 0
-    Call Lib.第七史詩.GO_RED_N()
-    Call Lib.第七史詩.GO_RED_N_CLICK()
-    Call Lib.第七史詩.GO_W_CLICK()
-    Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E.bmp",0.5,intX,intY
-        If intX > 0 And intY > 0 Then 
-            MoveTo 947, 529
-            Delay 1000
-            LeftClick 1
-            '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 320, 153
-            Delay 353
-            LeftDown 1
-            Delay 24
+            Delay 4
             LeftClick 1
             Delay 1
             LeftUp 1
-            MoveTo 1062, 573
-            Delay 1000
+            MoveTo 1093, 647
+            Delay 881
             LeftDown 1
             Delay 3
             LeftClick 1
-            Delay 2
+            Delay 1
             LeftUp 1
-            MoveTo 1086, 690
-            Delay 678
+            '==========以上是按鍵精靈錄製的內容==========
+        End If
+    Loop Until intX > 0 And intY > 0
+    Call Lib.第七史詩.GO_RED_N()
+    Call Lib.第七史詩.GO_W_CLICK()
+    Do
+        Call Lib.第七史詩.寶箱()
+        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
+        If intX > 0 And intY > 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 312, 148
+            Delay 333
+            LeftDown 1
+            Delay 28
+            LeftClick 1
+            Delay 1
+            LeftUp 1
+            MoveTo 856, 393
+            Delay 1519
+            LeftDown 1
+            Delay 3
+            LeftClick 1
+            Delay 3
+            LeftUp 1
+            MoveTo 1056, 708
+            Delay 654
             LeftDown 1
             Delay 2
             LeftClick 1
             Delay 2
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
-        End If
+        End If        
     Loop Until intX > 0 And intY > 0
     Do
         Call Lib.第七史詩.寶箱()
@@ -107,7 +104,7 @@ Sub 不死生物
     Loop Until intX > 0 And intY > 0
 End Sub
 i = inputbox("迴圈幾次", "提示")
-Call 不死生物()
+Call 人造生物()
 For i - 1
     Call Lib.第七史詩.CLEAR()
     Call Lib.第七史詩.確認()
@@ -115,7 +112,7 @@ For i - 1
     MoveTo 1490, 914
     LeftClick 1
     Call Lib.第七史詩.選擇隊伍()
-    Call 不死生物()
+    Call 人造生物()
 Next
 Call Lib.第七史詩.CLEAR()
 MessageBox "END"
