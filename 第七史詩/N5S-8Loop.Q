@@ -24,13 +24,16 @@ SetupOCXFile=
 
 [Script]
 Sub 次元
-    Call Lib.第七史詩.戰鬥()
-    Call Lib.第七史詩.GO_RED_N_CLICK()
-    Call Lib.第七史詩.GO_E_CLICK()
+    Call Lib.epic7_ver2.戰鬥開始()
+    Call Lib.epic7_ver2.GO_RED_N_CLICK()
+    Call Lib.epic7_ver2.GO_E_CLICK()
     Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱()
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|25|7ED8FF",1)
+        dim MyArray
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 304, 150
             Delay 337
@@ -55,10 +58,13 @@ Sub 次元
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop Until X > 0 And Y > 0
     Do
-        FindPic 1448,581,1800,862,"D:\按鍵精靈2014\screen\epic7_4-4\S.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱()
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FD9FF","-25|-25|7BD6FF",1)
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
             Delay 3000
             MoveTo 965, 582
             LeftClick 1
@@ -66,18 +72,18 @@ Sub 次元
             MoveTo 1095, 676
             LeftClick 1
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop Until X > 0 And Y > 0
 End Sub
 i = inputbox("迴圈幾次", "提示")
 Call 次元()
 For i - 1
-    Call Lib.第七史詩.CLEAR()
-    Call Lib.第七史詩.確認()
+    Call Lib.epic7_ver2.CLEAR()
+    Call Lib.epic7_ver2.確認()
     Delay 5000
     MoveTo 1490, 914
     LeftClick 1
-    Call Lib.第七史詩.選擇隊伍()
+    Call Lib.epic7_ver2.選擇隊伍()
     Call 次元()
 Next
-Call Lib.第七史詩.CLEAR()
+Call Lib.epic7_ver2.CLEAR()
 MessageBox "END"

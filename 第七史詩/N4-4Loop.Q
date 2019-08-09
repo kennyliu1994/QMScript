@@ -23,63 +23,38 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Sub GO_E()
-    Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E2.bmp",0.5,intX,intY
-        If intX > 0 And intY > 0 Then 
-            '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 1632, 378
-            Delay 444
-            LeftDown 1
-            Delay 4
-            LeftClick 1
-            Delay 1
-            LeftUp 1
-            '==========以上是按鍵精靈錄製的內容==========
-            Delay 1000
-        End If
-    Loop Until intX > 0 And intY > 0
-End Sub
 Sub 鈴鐺鼠部落()
-    Call Lib.第七史詩.戰鬥()
+    Call Lib.epic7_ver2.戰鬥開始()
     Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱()
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|25|7ED8FF",1)
+        dim MyArray
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 237, 146
             Delay 374
-            LeftDown 1
-            Delay 15
             LeftClick 1
-            Delay 2
-            LeftUp 1
             MoveTo 463, 492
             Delay 1150
-            LeftDown 1
-            Delay 2
             LeftClick 1
-            Delay 1
-            LeftUp 1
             MoveTo 1102, 665
             Delay 791
-            LeftDown 1
-            Delay 2
             LeftClick 1
-            Delay 2
-            LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
             Delay 1000
         End If
-    Loop Until intX > 0 And intY > 0
-    Call GO_E()
-    Call Lib.第七史詩.GO_S()
-    Call Lib.第七史詩.GO_S()
+    Loop Until X > 0 And Y > 0
+    Call Lib.epic7_ver2.GO_E()
+    Call Lib.epic7_ver2.GO_S()
+    Call Lib.epic7_ver2.GO_S()
     Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱()
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|25|7ED8FF",1)
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 266, 165
             Delay 281
@@ -104,13 +79,15 @@ Sub 鈴鐺鼠部落()
             '==========以上是按鍵精靈錄製的內容==========
             Delay 1000
         End If
-    Loop Until intX > 0 And intY > 0
-    Call Lib.第七史詩.GO_RED_N()
-    Call GO_E()
+    Loop Until X > 0 And Y > 0
+    Call Lib.epic7_ver2.GO_RED_N()
+    Call Lib.epic7_ver2.GO_E()
     Do
-        Call Lib.第七史詩.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱()
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|25|7ED8FF",1)
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 264, 159
             LeftClick 1
@@ -130,10 +107,13 @@ Sub 鈴鐺鼠部落()
             LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop Until X > 0 And Y > 0
     Do
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱()
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|25|7ED8FF",1)
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
             Delay 3000
             MoveTo 965, 582
             LeftClick 1
@@ -141,18 +121,18 @@ Sub 鈴鐺鼠部落()
             MoveTo 1095, 676
             LeftClick 1
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop Until X > 0 And Y > 0
 End Sub
 i = inputbox("迴圈幾次", "提示")
 Call 鈴鐺鼠部落()
 For i - 1
-    Call Lib.第七史詩.CLEAR()
-    Call Lib.第七史詩.確認()
+    Call Lib.epic7_ver2.CLEAR()
+    Call Lib.epic7_ver2.確認()
     Delay 5000
     MoveTo 1490, 914
     LeftClick 1
-    Call Lib.第七史詩.選擇隊伍()
+    Call Lib.epic7_ver2.選擇隊伍()
     Call 鈴鐺鼠部落()
 Next
-Call Lib.第七史詩.CLEAR()
+Call Lib.epic7_ver2.CLEAR()
 MessageBox "END"
