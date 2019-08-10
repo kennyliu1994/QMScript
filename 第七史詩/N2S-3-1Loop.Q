@@ -24,9 +24,9 @@ SetupOCXFile=
 
 [Script]
 Sub 迴圈肥料()
-    Call Lib.第七史詩.戰鬥()
+    Call Lib.epic7_ver2.戰鬥開始()
     Do
-        Call Lib.第七史詩.寶箱()
+        Call Lib.epic7_ver2.寶箱()
         FindPic 120,804,314,996,"D:\按鍵精靈2014\screen\epic7_4-4\藥水.bmp",0.8,intX,intY
         If intX > 0 And intY > 0 Then 
             Delay 1000
@@ -56,7 +56,7 @@ Sub 迴圈肥料()
         End If
     Loop Until intX > 0 And intY > 0
     Do
-        Call Lib.第七史詩.寶箱()
+        Call Lib.epic7_ver2.寶箱()
         FindPic 248,686,327,751,"D:\按鍵精靈2014\screen\epic7_4-4\W_N3-1.bmp",0.5,intX,intY
         If intX> 0 And intY> 0 Then
             Delay 1000
@@ -87,7 +87,7 @@ Sub 迴圈肥料()
         End If
     Loop Until intX > 0 And intY > 0
     Do
-        Call Lib.第七史詩.寶箱()
+        Call Lib.epic7_ver2.寶箱()
         FindPic 1598,680,1660,748,"D:\按鍵精靈2014\screen\epic7_4-4\S_N3-1.bmp",0.4,intX,intY
         If intX> 0 And intY> 0 Then
             Delay 1000
@@ -126,13 +126,13 @@ End Sub
 i = inputbox("迴圈幾次", "提示")
 Call 迴圈肥料()
 For i - 1
-    Call Lib.第七史詩.CLEAR()
-    Call Lib.第七史詩.確認()
+    Call Lib.epic7_ver2.CLEAR()
+    Call Lib.epic7_ver2.確認()
     Delay 5000
     MoveTo 1490, 914
     LeftClick 1
-    Call Lib.第七史詩.選擇隊伍()
+    Call Lib.epic7_ver2.選擇隊伍()
     Call 迴圈肥料()
 Next
-Call Lib.第七史詩.CLEAR()
+Call Lib.epic7_ver2.CLEAR()
 MessageBox "END"

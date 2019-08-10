@@ -25,24 +25,24 @@ SetupOCXFile=
 [Script]
 i = inputbox("迴圈幾次", "提示")
 For i - 1
-    Call Lib.第七史詩.戰鬥()
+    Call Lib.epic7_ver2.戰鬥開始()
     Delay 2000
     FindPic 1030,692,1117,748,"D:\按鍵精靈2014\screen\epic7_4-4\購買.bmp",0.9,intX,intY
     If intX > 0 And intY > 0 Then 
         MoveTo 1073, 717
         LeftClick 1
-        Call Lib.第七史詩.戰鬥()
+        Call Lib.epic7_ver2.戰鬥開始()
     End If
-    Call Lib.第七史詩.CLEAR()
-    Call Lib.第七史詩.確認()
+    Call Lib.epic7_ver2.CLEAR()
+    Call Lib.epic7_ver2.確認()
 Next
-Call Lib.第七史詩.戰鬥()
+Call Lib.epic7_ver2.戰鬥開始()
 Delay 2000
 FindPic 1030,692,1117,748,"D:\按鍵精靈2014\screen\epic7_4-4\購買.bmp",0.9,intX,intY
 If intX > 0 And intY > 0 Then 
     MoveTo 1073, 717
     LeftClick 1
-    Call Lib.第七史詩.戰鬥()
+    Call Lib.epic7_ver2.戰鬥開始()
 End If
-Call Lib.第七史詩.CLEAR()
+Call Lib.epic7_ver2.CLEAR()
 MessageBox "END"

@@ -25,11 +25,11 @@ SetupOCXFile=
 [Script]
 i = inputbox("迴圈幾次", "提示")
 For i - 1
-    Call Lib.第七史詩.戰鬥()
-    Call Lib.第七史詩.CLEAR()
-    Call Lib.第七史詩.確認()
-    Call Lib.第七史詩.選擇隊伍()
+    Call Lib.epic7_ver2.戰鬥開始()
+    Call Lib.epic7_ver2.CLEAR()
+    Call Lib.epic7_ver2.確認()
+    Call Lib.epic7_ver2.選擇隊伍()
 Next
-Call Lib.第七史詩.戰鬥()
-Call Lib.第七史詩.CLEAR()
+Call Lib.epic7_ver2.戰鬥開始()
+Call Lib.epic7_ver2.CLEAR()
 MessageBox "END"

@@ -28,13 +28,18 @@ SetupOCXFile=
 //Call Lib.epic7_ver2.GO_RED_N()
 //Call Lib.epic7_ver2.GO_E()
 Do
-    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"18B464",1)
-dim MyArray
-MyArray = Split(XY, "|")
-X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|-26|7FD8FF",1)
+    dim MyArray
+    MyArray = Split(XY, "|")
+    X = CInt(MyArray(0)): Y = CInt(MyArray(1))
     If X > 0 And Y > 0 Then 
         '==========以下是按鍵精靈錄製的內容==========
-        MessageBox"123"
+        MoveTo 967, 559
+        Delay 477
+        LeftClick 1
+        MoveTo 1095, 672
+        Delay 1142
+        LeftClick 1
         '==========以上是按鍵精靈錄製的內容==========
         Delay 2000
     End If
