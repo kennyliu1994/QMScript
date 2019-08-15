@@ -29,13 +29,34 @@ Sub 普通1右下左上
     Call Lib.epic7_ver2.GO_E()
     Call Lib.epic7_ver2.GO_S()
     Call Lib.epic7_ver2.GO_E()
-    MessageBox "帳篷"
+    Do
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|-26|7FD8FF",1)
+        dim MyArray
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MessageBox "帳篷"
+            '==========以上是按鍵精靈錄製的內容==========
+            Delay 2000
+        End If
+    Loop Until X > 0 And Y > 0
     MessageBox "傳回中央"
     Call Lib.epic7_ver2.GO_W()
     Call Lib.epic7_ver2.GO_W()
     Call Lib.epic7_ver2.GO_W()
     Call Lib.epic7_ver2.GO_W()
-    MessageBox "END"
+    Do
+        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|25|7ED8FF",1)
+        MyArray = Split(XY, "|")
+        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+        If X > 0 And Y > 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MessageBox "END"
+            '==========以上是按鍵精靈錄製的內容==========
+            Delay 2000
+        End If
+    Loop Until X > 0 And Y > 0
 End Sub
 Sub 普通迷宮2右上左下
     Call Lib.epic7_ver2.GO_E()
@@ -155,7 +176,7 @@ Sub 尼克斯特的聖所
     MessageBox "手動"
     MessageBox "END"
 End Sub
-i = inputbox("普通1右下左上 1" & vbcr & "普通迷宮2右上左下 2" & vbcr & "普通迷宮3女王左上 3" & vbcr & "地獄迷宮左上 4" & vbcr & "地獄迷宮右上 5"& vbcr & "尼克斯特的聖所 6", "提示")
+i = inputbox("1 普通迷宮1右下左上" & vbcr & "2 普通迷宮2右上左下" & vbcr & "3 普通迷宮3女王左上" & vbcr & "4 地獄迷宮左上" & vbcr & "5 地獄迷宮右上"& vbcr & "6 尼克斯特的聖所", "提示")
 If i = 1 Then Call 普通1右下左上()
 If i = 2 Then Call 普通迷宮2右上左下()
 If i = 3 Then Call 普通迷宮3女王左上()

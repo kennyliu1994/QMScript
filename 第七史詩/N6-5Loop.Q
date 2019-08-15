@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=295ab1fe-ed8b-4ea1-83c6-025d58120003
-Description=魔法實驗體8迴圈
+Description=魔法實驗體8迴圈Looptest
 Enable=0
 AutoRun=0
 [Repeat]

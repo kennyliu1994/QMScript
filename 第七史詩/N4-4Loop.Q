@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=798bf2e3-008a-4a07-8f39-f3b3846baf90
-Description=筧臠公场辅29癹伴
+Description=筧臠公场辅29Loop
 Enable=0
 AutoRun=0
 [Repeat]

@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
-Description=人造生物27迴圈
+Description=人造生物27Looptest
 Enable=0
 AutoRun=0
 [Repeat]

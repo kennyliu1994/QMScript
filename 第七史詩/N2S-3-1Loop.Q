@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=0939e4ba-b8fb-4479-ab99-eab1c11d36f7
-Description=肥料+親密度迴圈
+Description=肥料+親密度Loop
 Enable=0
 AutoRun=0
 [Repeat]

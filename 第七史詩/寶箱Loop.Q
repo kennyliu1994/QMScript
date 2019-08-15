@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=5dd314f7-8d16-488c-9020-a4e07b7b1956
-Description=Ä_½c
+Description=Ä_½cLoop
 Enable=0
 AutoRun=0
 [Repeat]
@@ -24,5 +24,5 @@ SetupOCXFile=
 
 [Script]
 Do
-    Call Lib.²Ä¤C¥v¸Ö.Ä_½c()
+    Call Lib.epic7_ver2.Ä_½c()
 Loop
