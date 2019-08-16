@@ -116,18 +116,26 @@ Sub 迴圈肥料()
             '==========以上是按鍵精靈錄製的內容==========
         End If
     Loop Until intX > 0 And intY > 0
-    Delay 9000
-    MoveTo 965, 582
-    LeftClick 1
-    Delay 1000
-    MoveTo 1095, 676
-    LeftClick 1
+    Do        
+        IfColor 1663, 348, "76D2FF", 0 Then
+            '==========以下是按鍵精靈錄製的內容==========
+            Delay 1000
+            MoveTo 965, 582
+            LeftClick 1
+            Delay 1000
+            MoveTo 1095, 676
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容==========
+            Exit Do
+        End If
+    Loop 
 End Sub
 i = inputbox("迴圈幾次", "提示")
 Call 迴圈肥料()
 For i - 1
     Call Lib.epic7_ver2.CLEAR()
     Call Lib.epic7_ver2.確認()
+    //準備戰鬥
     Delay 5000
     MoveTo 1490, 914
     LeftClick 1

@@ -100,6 +100,9 @@ Sub 地獄迷宮左上
     Call Lib.epic7_ver2.GO_RED_N()
     MessageBox "關技能"
     Call Lib.epic7_ver2.GO_RED_N()
+    MessageBox "BOSS"
+    Call Lib.epic7_ver2.GO_E()
+    Call Lib.epic7_ver2.GO_E()
     MessageBox "END"
 End Sub
 Sub 地獄迷宮右上
