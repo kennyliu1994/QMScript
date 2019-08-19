@@ -112,9 +112,7 @@ Sub 地獄迷宮右上
     Call Lib.epic7_ver2.GO_RED_N()
     Call Lib.epic7_ver2.GO_RED_N()
     MessageBox "帳篷"
-    Call Lib.epic7_ver2.GO_S()
-    Call Lib.epic7_ver2.GO_E()
-    MessageBox "手動"
+    MessageBox "手動打小王"
     Call Lib.epic7_ver2.GO_W()
     Call Lib.epic7_ver2.GO_S()
     Call Lib.epic7_ver2.GO_E()
@@ -123,57 +121,34 @@ Sub 地獄迷宮右上
     MessageBox "END"
 End Sub
 Sub 尼克斯特的聖所
-    Call Lib.epic7_ver2.戰鬥開始()
-    Call Lib.epic7_ver2.GO_RED_N()
+    Call Lib.epic7_ver2.GO_RED_N_CLICK()
     Do
         Call Lib.epic7_ver2.寶箱()
-        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FD9FF","-25|-25|7BD6FF",1)
-        dim MyArray
-        MyArray = Split(XY, "|")
-        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
-        If X > 0 And Y > 0 Then 
-            '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 967, 559
-            Delay 477
-            LeftClick 1
-            MoveTo 1095, 672
-            Delay 1142
-            LeftClick 1
-            '==========以上是按鍵精靈錄製的內容==========
-            Delay 2000
+        IfColor 1661,747,"76D2FF",0 Then
+            Call Lib.epic7_ver2.傳送門()
+            Exit Do
         End If
-    Loop Until X > 0 And Y > 0
+    Loop 
     Call Lib.epic7_ver2.GO_W()
     Call Lib.epic7_ver2.GO_W()
     Call Lib.epic7_ver2.GO_RED_N()
     Do
         Call Lib.epic7_ver2.寶箱()
-        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FD9FF","-25|-25|7BD6FF",1)
-        MyArray = Split(XY, "|")
-        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
-        If X > 0 And Y > 0 Then 
+        IfColor 1663, 348, "76D2FF", 0 Then
             MessageBox "商人"
+            MessageBox "帳篷"
             Delay 2000
+            Exit Do
         End If
-    Loop Until X > 0 And Y > 0
+    Loop 
     Call Lib.epic7_ver2.GO_E()
     Do
         Call Lib.epic7_ver2.寶箱()
-        XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"7FDAFF","24|-26|7FD8FF",1)
-        MyArray = Split(XY, "|")
-        X = CInt(MyArray(0)): Y = CInt(MyArray(1))
-        If X > 0 And Y > 0 Then 
-            '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 967, 559
-            Delay 477
-            LeftClick 1
-            MoveTo 1095, 672
-            Delay 1142
-            LeftClick 1
-            '==========以上是按鍵精靈錄製的內容==========
-            Delay 2000
+        IfColor 254, 746, "76D2FF", 0 Then
+            Call Lib.epic7_ver2.傳送門()
+            Exit Do
         End If
-    Loop Until X > 0 And Y > 0
+    Loop 
     Call Lib.epic7_ver2.GO_E()
     Call Lib.epic7_ver2.GO_E()
     MessageBox "手動"

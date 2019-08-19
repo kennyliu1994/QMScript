@@ -37,17 +37,17 @@ SetupOCXFile=
 //Next
 //TracePrint b
 //////////////////////////////////////////////////////////////////////////
-Do
-    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"3C4A30","26|1|FAFAFA,17|10|FFFFFF",1)
-    dim MyArray
-    MyArray = Split(XY, "|")
-    X = CInt(MyArray(0)): Y = CInt(MyArray(1))
-    If X > 0 And Y > 0 Then 
-        TracePrint "FOUND"
-    Else 
-        TracePrint "NOT FOUND"
-    End If
-Loop 
+//Do
+//    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"2E2D36","3|102|1F1F20",1)
+//    dim MyArray
+//    MyArray = Split(XY, "|")
+//    X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+//    If X > 0 And Y > 0 Then 
+//        TracePrint "FOUND"
+//    Else 
+//        TracePrint "NOT FOUND"
+//    End If
+//Loop 
 //////////////////////////////////////////////////////////////////////////
 //Dim b
 //b=0
@@ -59,7 +59,9 @@ Loop
 //Next
 //TracePrint b
 //////////////////////////////////////////////////////////////////////////
-//Call Lib.epic7_ver2.CLEAR()
+//Call Lib.epic7_ver2.¾Ô°«¶}©l()
+Plugin.Msg.Tips "hi"
+
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////

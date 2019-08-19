@@ -151,7 +151,7 @@ Sub CLEAR()
         Call Lib.epic7_ver2.FAILED()
         IfColor 931,294,"9CFFFF",0 Then
             MoveTo 1665, 915
-            Delay 1000
+            Delay 1200
             LeftClick 1
             MoveTo 861, 694
             Delay 3000
@@ -177,20 +177,35 @@ Sub 確認()
         If X > 0 And Y > 0 Then 
             MoveTo 1665, 915
             Delay 1000
-            LeftClick 1
+            LeftClick 1 
+            Call Lib.epic7_ver2.親密度上升() 
             //緊急任務
             MoveTo 829, 727
             Delay 1000
             LeftClick 1
             MoveTo 1638, 913
             Delay 2000
-            LeftClick 1
+            LeftClick 1  
+            Exit Do
         End If
-    Loop Until X > 0 And Y > 0
+    Loop
+End Sub
+Sub 親密度上升()
+    Delay 2000
+    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"CCCCCC","37|18|898989,93|1|DBDBDB",1)
+    dim MyArray
+    MyArray = Split(XY, "|")
+    X = CInt(MyArray(0)): Y = CInt(MyArray(1))
+    If X > 0 And Y > 0 Then 
+        MoveTo 1118, 750
+        Delay 1000
+        LeftClick 1
+        Call Lib.epic7_ver2.確認()
+    End If
 End Sub
 Sub 選擇隊伍()
     Do
-    FindPic 1285,867,1420,922,"D:\按鍵精靈2014\screen\ver2\選擇隊伍.bmp",0.4,intX,intY
+        FindPic 1285,867,1420,922,"D:\按鍵精靈2014\screen\ver2\選擇隊伍.bmp",0.4,intX,intY
         If intX > 0 And intY > 0 Then 
             MoveTo 1352, 888
             Delay 1000
@@ -207,4 +222,14 @@ Sub 寶箱()
         Goto again
     End If
 End Sub
-    
+Sub 傳送門()
+    '==========以下是按鍵精靈錄製的內容==========
+    MoveTo 967, 559
+    Delay 477
+    LeftClick 1
+    MoveTo 1095, 672
+    Delay 1142
+    LeftClick 1
+    '==========以上是按鍵精靈錄製的內容==========
+    Delay 2000
+End Sub
