@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=0939e4ba-b8fb-4479-ab99-eab1c11d36f7
 Description=肥料+親密度Loop
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -24,7 +24,8 @@ SetupOCXFile=
 
 [Script]
 Sub 迴圈肥料()
-    Call Lib.epic7_ver2.戰鬥開始()
+    //    Call Lib.epic7_ver2.戰鬥開始()
+    Call Lib.epic7_ver2.戰鬥開始dm()
     Do
         Call Lib.epic7_ver2.寶箱()
         FindPic 120,804,314,996,"D:\按鍵精靈2014\screen\epic7_4-4\藥水.bmp",0.8,intX,intY
@@ -130,17 +131,29 @@ Sub 迴圈肥料()
         End If
     Loop 
 End Sub
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\大漠找圖"
+hwnd = dm.GetMousePointWindow()
+dm_ret = dm.BindWindow(hwnd, "normal", "normal", "normal", 0)
+dm_ret = dm.SetDict(0, "normal.txt")
 i = inputbox("迴圈幾次", "提示")
 Call 迴圈肥料()
 For i - 1
-    Call Lib.epic7_ver2.CLEAR()
-    Call Lib.epic7_ver2.確認()
+    //    Call Lib.epic7_ver2.CLEAR()
+    //    Call Lib.epic7_ver2.確認()
+    Call Lib.epic7_ver2.CLEARdm()
+    Call Lib.epic7_ver2.確認dm()
     //準備戰鬥
-    Delay 5000
-    MoveTo 1490, 914
-    LeftClick 1
-    Call Lib.epic7_ver2.選擇隊伍()
+    //    Delay 5000
+    //    MoveTo 1490, 914
+    //    LeftClick 1
+    //    Call Lib.epic7_ver2.選擇隊伍()
+    Call Lib.epic7_ver2.準備戰鬥dm()
+    Call Lib.epic7_ver2.選擇隊伍dm()
     Call 迴圈肥料()
 Next
-Call Lib.epic7_ver2.CLEAR()
+//Call Lib.epic7_ver2.CLEAR()
+Call Lib.epic7_ver2.CLEARdm()
 MessageBox "END"
+dm_ret = dm.UnBindWindow()

@@ -1,6 +1,6 @@
 [General]
 SyntaxVersion=2
-BeginHotkey=121
+BeginHotkey=119
 BeginHotkeyMod=0
 PauseHotkey=0
 PauseHotkeyMod=0
@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=331047a9-9b81-426f-ab79-e8013b07176b
-Description=測試
+Description=test
 Enable=0
 AutoRun=0
 [Repeat]
@@ -24,21 +24,23 @@ SetupOCXFile=
 
 [Script]
 //////////////////////////////////////////////////////////////////////////
-//Dim b
-//b=0
-//For 100
-//        IfColor 1663, 348, "76D2FF", 0 Then//E
-//            IfColor 255,346,"76D2FF",0 Then//N
-//IfColor 254, 746, "76D2FF", 0 Then//W
-//    //    IfColor 1661,747,"76D2FF",0 Then//S
-//    b=b+1
-//Else 
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\大漠找圖"
+hwnd = dm.GetMousePointWindow()
+dm_ret = dm.BindWindow(hwnd, "normal", "normal", "normal", 0)
+dm_ret = dm.SetDict(0, "normal.txt")
+Call Lib.epic7_ver2.戰鬥開始dm()
+
+//dm_ret = dm.FindStr(820, 271, 1075, 327, "背包空間不足", "fcf7f0-303030|bec2b8-303030", 0.8, intX, intY)
+//If intX > 0 And intY > 0 Then 
+//    id = dm.Play("sound\背包滿了.mp3")
+//    dm.Stop id
 //End If
-//Next
-//TracePrint b
+dm_ret = dm.UnBindWindow()
 //////////////////////////////////////////////////////////////////////////
 //Do
-//    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"2E2D36","3|102|1F1F20",1)
+//    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"CCCCCC","37|18|898989,93|1|DBDBDB",1)
 //    dim MyArray
 //    MyArray = Split(XY, "|")
 //    X = CInt(MyArray(0)): Y = CInt(MyArray(1))
@@ -60,11 +62,16 @@ SetupOCXFile=
 //TracePrint b
 //////////////////////////////////////////////////////////////////////////
 //Call Lib.epic7_ver2.戰鬥開始()
-Plugin.Msg.Tips "hi"
-
+//Plugin.Msg.Tips "hi"
 //////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
-//////////////////////////////////////////////////////////////////////////
+//Do
+//    FindPic 151, 468, 1764, 664, "D:\按鍵精靈2014\screen\epic7_4-4\寶箱.bmp", 0.3, BoxX, BoxY    
+//    If BoxX > 0 And BoxY > 0 Then 
+//        TracePrint "FOUND"
+//    Else 
+//        TracePrint "NOT FOUND"
+//    End If
+//Loop 
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////

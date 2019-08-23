@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=55343fdd-1ca5-407e-a1f0-941deddeb16f
 Description=基本Loop
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -23,9 +23,6 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-i = inputbox("1 選擇好友" & vbcr & "2 不選擇好友(自動消耗葉子)", "提示")
-If i = 1 Then Call 選擇好友()
-If i = 2 Then Call 不選擇好友()
 Sub 選擇好友
     i = inputbox("迴圈幾次", "提示")
     For i - 1
@@ -63,3 +60,6 @@ Sub 不選擇好友
     Call Lib.epic7_ver2.CLEAR()
     MessageBox "END"
 End Sub
+i = inputbox("1 選擇好友" & vbcr & "2 不選擇好友(自動消耗葉子)", "提示")
+If i = 1 Then Call 選擇好友()
+If i = 2 Then Call 不選擇好友()
