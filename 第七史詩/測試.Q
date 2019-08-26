@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=331047a9-9b81-426f-ab79-e8013b07176b
-Description=test
+Description=測試
 Enable=0
 AutoRun=0
 [Repeat]
@@ -27,17 +27,16 @@ SetupOCXFile=
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\大漠找圖"
-hwnd = dm.GetMousePointWindow()
-dm_ret = dm.BindWindow(hwnd, "normal", "normal", "normal", 0)
 dm_ret = dm.SetDict(0, "normal.txt")
-Call Lib.epic7_ver2.戰鬥開始dm()
-
-//dm_ret = dm.FindStr(820, 271, 1075, 327, "背包空間不足", "fcf7f0-303030|bec2b8-303030", 0.8, intX, intY)
-//If intX > 0 And intY > 0 Then 
-//    id = dm.Play("sound\背包滿了.mp3")
-//    dm.Stop id
-//End If
-dm_ret = dm.UnBindWindow()
+Do
+    //dm_ret = dm.FindStr(1610,894,1731,935, "再來一次","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
+    dm.FindPic 160,866,241,974, "picture\medicine.bmp", "000000", 0.9, 0, intX, intY
+    If intX > 0 And intY > 0 Then 
+        MoveTo intX, intY
+    End If
+Loop
+//////////////////////////////////////////////////////////////////////////
+//Call Lib.epic7_ver2.戰鬥開始dm()
 //////////////////////////////////////////////////////////////////////////
 //Do
 //    XY=Plugin.Color.FindMutiColor(0,0,1920,1080,"CCCCCC","37|18|898989,93|1|DBDBDB",1)

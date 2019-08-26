@@ -23,6 +23,10 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Do
-    Call Lib.epic7_ver2.Ä_½c()
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\¤jºz§ä¹Ï"
+dm_ret = dm.SetDict(0, "normal.txt")
+Do    
+    Call Lib.epic7_ver2.Ä_½cdm()
 Loop
