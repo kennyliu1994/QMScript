@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
-Description=人造生物27Looptest
+Description=人造生物27Loop
 Enable=0
 AutoRun=0
 [Repeat]
@@ -23,117 +23,76 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Sub GO_E_CLICK()
-    Do
-        Call Lib.epic7_ver2.寶箱()
-        FindPic 1506,281,1747,469,"D:\按鍵精靈2014\screen\epic7_4-4\E_N9-7.bmp",0.7,intX,intY
-        If intX > 0 And intY > 0 Then 
-            MoveTo 947, 529
-            Delay 1000
-            LeftClick 1
-            '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 1632, 378
-            Delay 444
-            LeftDown 1
-            Delay 4
-            LeftClick 1
-            Delay 1
-            LeftUp 1
-            '==========以上是按鍵精靈錄製的內容==========
-            Delay 2000
-        End If
-    Loop Until intX > 0 And intY > 0
-End Sub
 Sub 人造生物
-    Call Lib.epic7_ver2.戰鬥開始()
-    Call GO_E_CLICK()
+    Call Lib.epic7_ver2.GO_E_CLICK()
     Call Lib.epic7_ver2.GO_S_CLICK()
-    Call GO_E_CLICK()
+    Call Lib.epic7_ver2.GO_E_CLICK()
     Do
-        Call Lib.epic7_ver2.寶箱()
-        FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        If dm_ret = 0 Then
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 264, 161
             Delay 317
-            LeftDown 1
-            Delay 9
-            LeftDown 1
-            Delay 30
             LeftClick 1
-            Delay 2
-            LeftUp 1
             MoveTo 410, 827
             Delay 1229
-            LeftDown 1
-            Delay 4
             LeftClick 1
-            Delay 1
-            LeftUp 1
             MoveTo 1093, 647
             Delay 881
-            LeftDown 1
-            Delay 3
             LeftClick 1
-            Delay 1
-            LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
+            Exit Do
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop
     Call Lib.epic7_ver2.GO_RED_N()
     Call Lib.epic7_ver2.GO_W_CLICK()
     Do
-        Call Lib.epic7_ver2.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        If dm_ret = 0 Then
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 312, 148
             Delay 333
-            LeftDown 1
-            Delay 28
             LeftClick 1
-            Delay 1
-            LeftUp 1
             MoveTo 856, 393
             Delay 1519
-            LeftDown 1
-            Delay 3
             LeftClick 1
-            Delay 3
-            LeftUp 1
             MoveTo 1056, 708
             Delay 654
-            LeftDown 1
-            Delay 2
             LeftClick 1
-            Delay 2
-            LeftUp 1
             '==========以上是按鍵精靈錄製的內容==========
+            Exit Do
         End If        
-    Loop Until intX > 0 And intY > 0
+    Loop 
     Do
-        Call Lib.epic7_ver2.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
-            Delay 3000
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        If dm_ret = 0 Then 
+            Delay 1000
             MoveTo 965, 582
             LeftClick 1
             Delay 1000
             MoveTo 1095, 676
             LeftClick 1
+            Exit Do
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop
 End Sub
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\大漠找圖"
+dm_ret = dm.SetDict(0, "normal.txt")
 i = inputbox("迴圈幾次", "提示")
-Call 人造生物()
 For i - 1
-    Call Lib.epic7_ver2.CLEAR()
-    Call Lib.epic7_ver2.確認()
-    Delay 5000
-    MoveTo 1490, 914
-    LeftClick 1
-    Call Lib.epic7_ver2.選擇隊伍()
+    Call Lib.epic7_ver2.戰鬥開始dm()
     Call 人造生物()
+    Call Lib.epic7_ver2.CLEARdm()
+    Call Lib.epic7_ver2.確認dm()
+    Call Lib.epic7_ver2.準備戰鬥dm()
+    Call Lib.epic7_ver2.選擇隊伍dm()
 Next
-Call Lib.epic7_ver2.CLEAR()
-MessageBox "END"
+Call Lib.epic7_ver2.戰鬥開始dm()
+Call 人造生物()
+Call Lib.epic7_ver2.CLEARdm()
+Call Lib.epic7_ver2.結束dm()
