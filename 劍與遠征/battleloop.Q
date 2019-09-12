@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=331047a9-9b81-426f-ab79-e8013b07176b
 Description=戰鬥重複
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -35,8 +35,8 @@ Sub 挑戰首領
     Loop
 End Sub
 Sub 挑戰首領BOSS
-    Delay 500
-    dm_ret = dm.FindStr(914,738,1007,770, "挑戰首領","fcffff-303030", 0.9,intX,intY)
+    Delay 2000
+    dm_ret = dm.FindStr(914,739,1009,770, "挑戰首領","fcffff-303030", 0.9,intX,intY)
     If intX > 0 And intY > 0 Then 
         MoveTo intX,intY
         dm.LeftClick 
@@ -65,8 +65,9 @@ Sub 再次挑戰或下一關
         dm_ret = dm.FindStr(928,856,993,884, "下一關","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo 953,422
+            Delay 500
+            dm.LeftClick
             Do
-                dm.LeftClick
                 dm_ret = dm.FindStr(919,848,1014,882, "挑戰首領","fcffff-303030", 0.9,intX,intY)
                 If intX > 0 And intY > 0 Then 
                     MoveTo 965, 792

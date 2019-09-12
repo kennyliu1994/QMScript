@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=7d3ec21f-f638-41ad-857d-d7b0842c73de
-Description=塔拉諾爾31Looptest
+Description=塔拉諾爾31Loop
 Enable=0
 AutoRun=0
 [Repeat]
@@ -23,75 +23,80 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Call Lib.epic7_ver2.戰鬥開始()
-Call Lib.epic7_ver2.GO_E_CLICK()
-Call Lib.epic7_ver2.GO_RED_N_CLICK()
-Call Lib.epic7_ver2.GO_RED_N_CLICK()
-Call Lib.epic7_ver2.GO_E_CLICK()
-Do
-    FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.3,intX,intY
-    If intX > 0 And intY > 0 Then 
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 308, 156
-        Delay 416
-        LeftDown 1
-        Delay 1
-        LeftDown 1
-        Delay 5
-        LeftDown 1
-        Delay 11
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 422, 680
-        Delay 1354
-        LeftDown 1
-        Delay 1
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        MoveTo 1114, 675
-        Delay 951
-        LeftDown 1
-        Delay 2
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容========== 
-        Delay 1000
-    End If
-Loop Until intX > 0 And intY > 0
-Call Lib.epic7_ver2.GO_S()
-Call Lib.epic7_ver2.GO_E()
-Do
-    Call Lib.epic7_ver2.寶箱()
-    FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-    If intX > 0 And intY > 0 Then 
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 319, 213
-        MoveTo 320, 172
-        Delay 502
-        LeftDown 1
-        Delay 18
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        MoveTo 709, 259
-        Delay 1040
-        LeftDown 1
-        Delay 2
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 1172, 681
-        Delay 696
-        LeftDown 1
-        Delay 1
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容==========
-        Delay 1000
-        MessageBox "END"
-    End If
-Loop Until intX > 0 And intY > 0
+Sub 塔拉諾爾
+    Call Lib.epic7_ver2.GO_E_CLICK()
+    Call Lib.epic7_ver2.GO_RED_N_CLICK()
+    Call Lib.epic7_ver2.GO_RED_N_CLICK()
+    Call Lib.epic7_ver2.GO_E_CLICK()
+    Do
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        If dm_ret = 0 Then
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 308, 156
+            Delay 416
+            LeftClick 1
+            MoveTo 422, 680
+            Delay 1354
+            LeftClick 1
+            MoveTo 1114, 675
+            Delay 951
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容========== 
+            Delay 1000
+            Exit Do
+        End If
+    Loop
+    Call Lib.epic7_ver2.GO_S()
+    Call Lib.epic7_ver2.GO_E()
+    Do
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        If dm_ret = 0 Then
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 319, 213
+            MoveTo 320, 172
+            Delay 502
+            LeftClick 1
+            MoveTo 709, 259
+            Delay 1040
+            LeftClick 1
+            MoveTo 1172, 681
+            Delay 696
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容==========
+            Delay 1000
+            Exit Do
+        End If
+    Loop
+    Do
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        If dm_ret = 0 Then
+            Delay 1000
+            MoveTo 965, 582
+            LeftClick 1
+            Delay 1000
+            MoveTo 1095, 676
+            LeftClick 1
+            Exit Do
+        End If
+    Loop 
+End Sub
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\大漠找圖"
+dm_ret = dm.SetDict(0, "normal.txt")
+i = inputbox("迴圈幾次", "提示")
+For i - 1
+    Call Lib.epic7_ver2.戰鬥開始dm()
+    Call 塔拉諾爾()
+    Call Lib.epic7_ver2.CLEARdm()
+    Call Lib.epic7_ver2.確認dm()
+    Call Lib.epic7_ver2.準備戰鬥dm()
+    Call Lib.epic7_ver2.選擇隊伍dm()
+Next
+Call Lib.epic7_ver2.戰鬥開始dm()
+Call 塔拉諾爾()
+Call Lib.epic7_ver2.CLEARdm()
+Call Lib.epic7_ver2.結束dm()

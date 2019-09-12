@@ -29,7 +29,7 @@ Sub 挑戰
         If intX > 0 And intY > 0 Then 
             MoveTo intX,intY
             Delay 500
-            dm.LeftClick 
+            dm.LeftClick
             Exit Do
         End If    
     Loop
@@ -54,22 +54,13 @@ Sub 再次挑戰或下一關
             dm.LeftClick 
             Call 戰鬥()
         End If
-        dm_ret = dm.FindStr(928,856,993,884, "下一關","fcffff-303030", 0.9,intX,intY)
+        dm_ret = dm.FindStr(784,421,1132,495, "VICTORY","ffffe5-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
-            MoveTo 953,422
-            Do
-                dm.LeftClick
-                dm_ret = dm.FindStr(919,848,1014,882, "挑戰首領","fcffff-303030", 0.9,intX,intY)
-                If intX > 0 And intY > 0 Then 
-                    MoveTo 965, 792
-                    Delay 500
-                    dm.LeftClick 
-                    Call 領取()
-                    Exit Do
-                End If    
-            Loop
+            MoveTo intX,intY
+            Delay 500
+            dm.LeftClick 
             Exit Do
-        End If 
+        End If
     Loop
 End Sub
 //////////////////////////////////////////////////////////////////////////
