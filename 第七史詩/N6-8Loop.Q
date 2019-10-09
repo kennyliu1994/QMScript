@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=7cc98968-d3ff-4501-8c19-d8594e105f5f
-Description=野生生物17Loop
+Description=野生生物17頂級犬齒
 Enable=0
 AutoRun=0
 [Repeat]

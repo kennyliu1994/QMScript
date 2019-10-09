@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=e20dfc01-6418-4b2a-94b5-7e6778818957
-Description=特殊提醒迴路 信徒Looptest
+Description=信徒45小太陽獎章特殊提醒迴路
 Enable=0
 AutoRun=0
 [Repeat]
@@ -23,113 +23,91 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Call Lib.epic7_ver2.戰鬥開始()
-Do
-    FindPic 120,804,314,996,"D:\按鍵精靈2014\screen\epic7_4-4\藥水.bmp",0.8,intX,intY
-    If intX > 0 And intY > 0 Then 
-        MoveTo 1600, 90
-        Delay 1000
-        LeftClick 1
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 309, 156
-        Delay 333
-        LeftDown 1
-        Delay 3
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        MoveTo 795, 843
-        Delay 1679
-        LeftDown 1
-        Delay 3
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        MoveTo 1076, 692
-        Delay 806
-        LeftDown 1
-        Delay 2
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 1600, 91
-        Delay 4000
-        LeftDown 1
-        Delay 2
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容==========
-    End If
-Loop Until intX > 0 And intY > 0
-Call Lib.epic7_ver2.GO_E()
-Call Lib.epic7_ver2.GO_RED_N_CLICK()
-Call Lib.epic7_ver2.GO_E_CLICK()
-Delay 1000
-Do
-    Call Lib.epic7_ver2.寶箱()
-    FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-    If intX > 0 And intY > 0 Then 
-        MoveTo 947, 529
-        Delay 1000
-        LeftClick 1
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 315, 157
-        Delay 408
-        LeftDown 1
-        Delay 14
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 1041, 207
-        Delay 1182
-        LeftDown 1
-        Delay 2
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 1099, 694
-        Delay 663
-        LeftDown 1
-        Delay 1
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        '==========以上是按鍵精靈錄製的內容==========
-    End If
-Loop Until intX > 0 And intY > 0
-Call Lib.epic7_ver2.GO_W()
-Call Lib.epic7_ver2.GO_RED_N_CLICK()
-Do
-    Call Lib.epic7_ver2.寶箱()
-    FindPic 164,631,394,811,"D:\按鍵精靈2014\screen\epic7_4-4\W.bmp",0.4,intX,intY
-    If intX > 0 And intY > 0 Then 
-        MoveTo 947, 529
-        Delay 1000
-        LeftClick 1
-        '==========以下是按鍵精靈錄製的內容==========
-        MoveTo 310, 157
-        Delay 376
-        LeftDown 1
-        Delay 14
-        LeftClick 1
-        Delay 2
-        LeftUp 1
-        MoveTo 1063, 429
-        Delay 1030
-        LeftDown 1
-        Delay 3
-        LeftClick 1
-        Delay 1
-        LeftUp 1
-        MoveTo 1034, 686
-        Delay 935
-        LeftDown 1
-        Delay 2
-        LeftClick 1
-        Delay 1
-        LeftUp 1        
-        '==========以上是按鍵精靈錄製的內容==========
-    End If
-Loop Until intX > 0 And intY > 0
-MessageBox "END"
+Sub 信徒
+    Call Lib.epic7_ver2.GO_S_CLICK()
+    Call Lib.epic7_ver2.GO_W_CLICK()
+    Call Lib.epic7_ver2.GO_S_CLICK()
+    Call Lib.epic7_ver2.GO_W_CLICK()
+    Do
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(1663, 348, "ffd276", 1.0)
+        If dm_ret = 0 Then
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 288, 158
+            Delay 398
+            LeftClick 1
+            MoveTo 930, 227
+            Delay 1125
+            LeftClick 1
+            LeftDown 1
+            Delay 3
+            LeftDown 1
+            MoveTo 727, 674
+            Delay 701
+            LeftUp 1
+            Delay 1
+            LeftUp 1
+            MoveTo 950, 323
+            Delay 825
+            LeftClick 1
+            MoveTo 1076, 666
+            Delay 1439
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容==========
+            Exit Do
+        End If
+    Loop
+    Call Lib.epic7_ver2.GO_W()
+    Call Lib.epic7_ver2.GO_RED_N_CLICK()
+    Do
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        If dm_ret = 0 Then 
+            MoveTo 947, 529
+            Delay 1000
+            LeftClick 1
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 288, 158
+            Delay 398
+            LeftClick 1
+            MoveTo 1057,429
+            Delay 825
+            LeftClick 1
+            MoveTo 1105,674
+            Delay 1439
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容==========
+            Exit Do
+        End If
+    Loop
+    Do
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        If dm_ret = 0 Then
+            Delay 1000
+            MoveTo 965, 582
+            LeftClick 1
+            Delay 1000
+            MoveTo 1095, 676
+            LeftClick 1
+            Exit Do
+        End If
+    Loop 
+End Sub
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\大漠找圖"
+dm_ret = dm.SetDict(0, "normal.txt")
+i = inputbox("迴圈幾次", "提示")
+For i - 1
+    Call Lib.epic7_ver2.戰鬥開始dm()
+    Call 信徒()
+    Call Lib.epic7_ver2.CLEARdm()
+    Call Lib.epic7_ver2.確認dm()
+    Call Lib.epic7_ver2.準備戰鬥dm()
+    Call Lib.epic7_ver2.選擇隊伍dm()
+Next
+Call Lib.epic7_ver2.戰鬥開始dm()
+Call 信徒()
+Call Lib.epic7_ver2.CLEARdm()
+Call Lib.epic7_ver2.結束dm()

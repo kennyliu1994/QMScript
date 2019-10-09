@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=331047a9-9b81-426f-ab79-e8013b07176b
-Description=戰鬥重複
+Description=戰役
 Enable=0
 AutoRun=0
 [Repeat]
@@ -38,7 +38,8 @@ Sub 戰鬥
     Do
         dm_ret = dm.FindStr(910,753,1008,791, "挑戰首領","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
-            MoveTo intX,intY
+            MoveTo intX, intY
+            Delay 500
             dm.LeftClick 
         End If    
         dm_ret = dm.FindStr(935,939,985,972, "戰鬥","fcffff-303030", 0.9,intX,intY)

@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=f6844cbd-74bf-4d43-86d6-9aedf99482b1
-Description=重甲兵頭盔Loop
+Description=重甲兵頭盔
 Enable=0
 AutoRun=0
 [Repeat]

@@ -9,8 +9,8 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
-Description=人造生物27Loop
-Enable=1
+Description=人造生物27畸形果凍靈魂火花
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0

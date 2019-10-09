@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=fc8267ad-402c-43bc-8b91-e0bddbe8a233
-Description=信徒45Loop
+Description=信徒45鋒利的矛刃
 Enable=0
 AutoRun=0
 [Repeat]

@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=9760c7bc-d063-4e8a-98f0-5ea43bfb168a
-Description=鱗紋部落22迴圈Looptest
+Description=鱗紋部落22燃燒的憤怒
 Enable=0
 AutoRun=0
 [Repeat]
@@ -24,63 +24,57 @@ SetupOCXFile=
 
 [Script]
 Sub 鱗紋部落
-    Call Lib.epic7_ver2.戰鬥開始()
     Call Lib.epic7_ver2.GO_E_CLICK()
     Do
-        Call Lib.epic7_ver2.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        If dm_ret = 0 Then
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 303, 166
             Delay 377
             LeftClick 1
             MoveTo 480, 453
             Delay 1239
-            LeftDown 1
-            Delay 2
             LeftClick 1
-            Delay 1
-            LeftUp 1
             MoveTo 1077, 695
             Delay 958
-            LeftDown 1
-            Delay 2
-            LeftDown 1
-            MoveTo 1078, 696
-            Delay 110
-            LeftUp 1
-            Delay 2
-            LeftUp 1
+            LeftClick 1
             '==========以上是按鍵精靈錄製的內容==========
+            Exit Do
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop
     Call Lib.epic7_ver2.GO_E()
     Call Lib.epic7_ver2.GO_S_CLICK()
     Call Lib.epic7_ver2.GO_E_CLICK()
     Call Lib.epic7_ver2.GO_S_CLICK()
     Do
-        Call Lib.epic7_ver2.寶箱()
-        FindPic 149,275,379,459,"D:\按鍵精靈2014\screen\epic7_4-4\N.bmp",0.4,intX,intY
-        If intX > 0 And intY > 0 Then 
-            Delay 3000
+        Call Lib.epic7_ver2.寶箱dm()
+        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        If dm_ret = 0 Then 
+            Delay 1000
             MoveTo 965, 582
             LeftClick 1
             Delay 1000
             MoveTo 1095, 676
             LeftClick 1
+            Exit Do
         End If
-    Loop Until intX > 0 And intY > 0
+    Loop 
 End Sub
+Set dm = createobject("dm.dmsoft")
+//TracePrint dm.ver()
+dm.SetPath "d:\大漠找圖"
+dm_ret = dm.SetDict(0, "normal.txt")
 i = inputbox("迴圈幾次", "提示")
-Call 鱗紋部落()
 For i - 1
-    Call Lib.epic7_ver2.CLEAR()
-    Call Lib.epic7_ver2.確認()
-    Delay 5000
-    MoveTo 1490, 914
-    LeftClick 1
-    Call Lib.epic7_ver2.選擇隊伍()
+    Call Lib.epic7_ver2.戰鬥開始dm()
     Call 鱗紋部落()
+    Call Lib.epic7_ver2.CLEARdm()
+    Call Lib.epic7_ver2.確認dm()
+    Call Lib.epic7_ver2.準備戰鬥dm()
+    Call Lib.epic7_ver2.選擇隊伍dm()
 Next
-Call Lib.epic7_ver2.CLEAR()
-MessageBox "END"
+Call Lib.epic7_ver2.戰鬥開始dm()
+Call 鱗紋部落()
+Call Lib.epic7_ver2.CLEARdm()
+Call Lib.epic7_ver2.結束dm()

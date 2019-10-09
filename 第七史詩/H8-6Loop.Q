@@ -8,8 +8,8 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=bcf89eb0-0226-4220-9668-9ec0b0be3c58
-Description=´cÅ]11Ås¦±ªº¤ü¾¦
+MacroID=e272be9b-9f30-4483-b1df-13caec25557c
+Description=´cÅ]11¦B§N¾®µø
 Enable=0
 AutoRun=0
 [Repeat]

@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=295ab1fe-ed8b-4ea1-83c6-025d58120003
-Description=魔法實驗體8Loop
+Description=魔法實驗體8無名的光彩盾牌騎士團信物
 Enable=0
 AutoRun=0
 [Repeat]

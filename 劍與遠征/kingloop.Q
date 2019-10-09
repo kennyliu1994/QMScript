@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=5b2aa54a-7939-4184-acdd-d5a04f0296d1
-Description=¤ý®y­«½Æ
+Description=¤ý®y¤§¶ð
 Enable=0
 AutoRun=0
 [Repeat]

@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=c78e2659-cada-4b10-8952-9de7ebc13f05
-Description=不死生物21Loop
+Description=不死生物21血塵之骨詛咒的灰燼
 Enable=0
 AutoRun=0
 [Repeat]
