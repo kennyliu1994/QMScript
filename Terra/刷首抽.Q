@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=9b734389-9b32-4d0e-9bf2-0c703126ae2b
 Description=¨ê­º©â
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -45,10 +45,41 @@ Sub right(t)
 End Sub
 t1 = dm.GetTime()
 Do
+    dm.FindPic 268,125,389,257, "picture\Terra\Terra_icon.bmp", "000000", 0.9, 0, intX, intY
+    If intX > 0 And intY > 0 Then 
+        MoveTo intX + 30, intY + 30
+        LeftDown 1        
+        Delay 3000
+        LeftUp 1
+        MoveTo 284,133
+        Delay 500
+        LeftClick 1
+        MoveTo 1017,555
+        Delay 500
+        LeftClick 1
+        MoveTo 465,24
+        Delay 500
+        LeftClick 1
+        Exit Do
+    End If    
+Loop
+Do
+    dm_ret = dm.FindStr(1580, 270, 1643, 303, "¦w¸Ë", "f6fbf9-303030", 1.0, intX, intY)
+    If intX > 0 And intY > 0 Then 
+        MoveTo 1616,288
+        Delay 500
+        LeftClick 1
+        MoveTo 262,26
+        Delay 500
+        LeftClick 1
+        Exit Do
+    End If    
+Loop
+Do
     dm.FindPic 281,134,610,218, "picture\Terra\Terra_icon.bmp", "000000", 0.9, 0, intX, intY
     If intX > 0 And intY > 0 Then 
         MoveTo intX+30, intY+30
-        Delay 500
+        Delay 1000
         LeftClick 1
         Exit Do
     End If    
@@ -686,22 +717,38 @@ Do
         Exit Do
     End If 
 Loop
+MoveTo 1093,734
 Do
     Delay 1000
     LeftClick 1
-    dm_ret = dm.FindStr(724,548,774,575,"Party","ffffff-303030",1.0,intX,intY)
-    If intX > 0 And intY > 0 Then         
-        MoveTo 1180,204
-        Delay 1000
-        LeftClick 1               
-        MoveTo 1159,177
-        Delay 1000
-        LeftClick 1
-        MoveTo 860,558
-        Delay 1000
+    dm_ret = dm.FindStr(973,235,1017,261,"Fate","ffffff-303030",1.0,intX,intY)
+    If intX > 0 And intY > 0 Then 
+        MoveTo 928,692
+        Delay 500
         LeftClick 1
         Exit Do
-    End If   
+    End If 
+Loop
+MoveTo 1093,734
+Do
+    Delay 1000
+    LeftClick 1
+    dm_ret = dm.FindStr(973,235,1017,261,"Fate","ffffff-303030",1.0,intX,intY)
+    If intX > 0 And intY > 0 Then 
+        MoveTo 1001,942
+        Delay 500
+        LeftClick 1
+        Exit Do
+    End If 
+Loop
+Do  
+    dm_ret = dm.FindStr(724,548,774,575,"Party","ffffff-303030",1.0,intX,intY)
+    If intX > 0 And intY > 0 Then         
+        MoveTo 961,479
+        Delay 500
+        LeftClick 1
+        Exit Do
+    End If
 Loop
 t2 = dm.GetTime()
 min = Round((t2 - t1) / 1000 / 60, 1)

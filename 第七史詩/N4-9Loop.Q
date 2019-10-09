@@ -8,9 +8,9 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=4eea5154-44d0-4311-81c8-d6160dcf1f0f
-Description=人造生物27Loop
-Enable=1
+MacroID=fc8267ad-402c-43bc-8b91-e0bddbe8a233
+Description=信徒45Loop
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -23,57 +23,78 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-Sub 人造生物
-    Call Lib.epic7_ver2.GO_E_CLICK()
-    Call Lib.epic7_ver2.GO_S_CLICK()
-    Call Lib.epic7_ver2.GO_E_CLICK()
+Sub 信徒()
+    Call Lib.epic7_ver2.GO_W_CLICK()
+    Call Lib.epic7_ver2.GO_W()
     Do
         Call Lib.epic7_ver2.寶箱dm()
-        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
-        If dm_ret = 0 Then
+        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        If dm_ret = 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 264, 161
-            Delay 317
+            MoveTo 298, 187
+            Delay 348
             LeftClick 1
-            MoveTo 410, 827
-            Delay 1229
+            MoveTo 838, 805
+            Delay 1334
             LeftClick 1
-            MoveTo 1093, 647
-            Delay 881
+            MoveTo 1020, 686
+            Delay 622
             LeftClick 1
             '==========以上是按鍵精靈錄製的內容==========
+            Delay 2000
+            Exit Do
+        End If
+    Loop    
+    Call Lib.epic7_ver2.GO_RED_N()
+    Call Lib.epic7_ver2.GO_E_CLICK()
+    Call Lib.epic7_ver2.GO_E_CLICK()
+    Call Lib.epic7_ver2.GO_RED_N_CLICK()
+    Do
+        dm_ret = dm.CmpColor(1663, 348, "ffd276", 1.0)
+        If dm_ret = 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 302, 170
+            Delay 342
+            LeftClick 1
+            MoveTo 1065, 529
+            Delay 1160
+            LeftClick 1
+            MoveTo 1047, 672
+            Delay 696
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容==========
+            Delay 2000
             Exit Do
         End If
     Loop
     Call Lib.epic7_ver2.GO_RED_N()
     Call Lib.epic7_ver2.GO_W_CLICK()
     Do
-        Call Lib.epic7_ver2.寶箱dm()
-        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
-        If dm_ret = 0 Then
+        dm_ret = dm.CmpColor(1663, 348, "ffd276", 1.0)
+        If dm_ret = 0 Then 
             '==========以下是按鍵精靈錄製的內容==========
-            MoveTo 312, 148
-            Delay 333
+            MoveTo 281, 157
+            Delay 267
             LeftClick 1
-            MoveTo 856, 393
-            Delay 1519
+            MoveTo 996, 424
+            Delay 1287
             LeftClick 1
-            MoveTo 1056, 708
-            Delay 654
+            MoveTo 1078, 674
+            Delay 694
             LeftClick 1
             '==========以上是按鍵精靈錄製的內容==========
+            Delay 2000
             Exit Do
-        End If        
-    Loop 
+        End If
+    Loop
     Do
-        Call Lib.epic7_ver2.寶箱dm()
         dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
-        If dm_ret = 0 Then 
-            Delay 1000
+        If dm_ret = 0 Then
             MoveTo 965, 582
-            LeftClick 1
             Delay 1000
+            LeftClick 1
             MoveTo 1095, 676
+            Delay 1000
             LeftClick 1
             Exit Do
         End If
@@ -86,13 +107,13 @@ dm_ret = dm.SetDict(0, "normal.txt")
 i = inputbox("迴圈幾次", "提示")
 For i - 1
     Call Lib.epic7_ver2.戰鬥開始dm()
-    Call 人造生物()
+    Call 信徒()
     Call Lib.epic7_ver2.CLEARdm()
     Call Lib.epic7_ver2.確認dm()
     Call Lib.epic7_ver2.準備戰鬥dm()
     Call Lib.epic7_ver2.選擇隊伍dm()
 Next
 Call Lib.epic7_ver2.戰鬥開始dm()
-Call 人造生物()
+Call 信徒()
 Call Lib.epic7_ver2.CLEARdm()
 Call Lib.epic7_ver2.結束dm()

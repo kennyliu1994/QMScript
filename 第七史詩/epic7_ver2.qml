@@ -17,7 +17,7 @@ Sub GO_E()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_RED_N()
     Do
@@ -30,7 +30,7 @@ Sub GO_RED_N()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_W()
     Do
@@ -43,7 +43,7 @@ Sub GO_W()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_S()
     Do
@@ -56,7 +56,7 @@ Sub GO_S()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_E_CLICK()
     Do
@@ -72,7 +72,7 @@ Sub GO_E_CLICK()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_RED_N_CLICK()
     Do
@@ -88,7 +88,7 @@ Sub GO_RED_N_CLICK()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_W_CLICK()
     Do
@@ -104,7 +104,7 @@ Sub GO_W_CLICK()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub GO_S_CLICK()
     Do
@@ -120,7 +120,7 @@ Sub GO_S_CLICK()
             Exit Do
         End If
     Loop
-    Delay 1500
+    Delay 1300
 End Sub
 Sub 戰鬥開始dm()
     Do
@@ -177,11 +177,12 @@ Sub CLEARdm()
     Loop
 End Sub
 Sub FAILEDdm()
-    dm_ret = dm.FindStr(1610,894,1731,935, "再來一次","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
+    dm_ret = dm.FindStr(1610,894,1731,935, "重新進行","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
     If intX > 0 And intY > 0 Then 
         MoveTo 1669, 918
         Delay 1000
         LeftClick 1
+        Call 選擇隊伍dm()
         Call 戰鬥開始dm()
     End If    
 End Sub
@@ -189,7 +190,7 @@ Sub 確認dm()
     Do
         dm_ret = dm.FindStr(1601,894,1668,934, "確認","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
         If intX > 0 And intY > 0 Then 
-            MoveTo 1634, 912
+            MoveTo intX, intY
             Delay 2000
             dm.LeftClick
             Exit Do
@@ -198,7 +199,7 @@ Sub 確認dm()
     Call 協助朋友dm()
     Call 親密度dm()
     Call 緊急任務dm()
-    Call 再來一次dm()
+    Call 重新進行dm()
 End Sub
 Sub 協助朋友dm()
     Delay 1000
@@ -233,7 +234,16 @@ Sub 再來一次dm()
     Delay 1000
     dm_ret = dm.FindStr(1610,894,1731,935, "再來一次","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
     If intX > 0 And intY > 0 Then 
-        MoveTo 1669, 918
+        MoveTo intX, intY
+        Delay 1000
+        LeftClick 1
+    End If
+End Sub
+Sub 重新進行dm()
+    Delay 1000
+    dm_ret = dm.FindStr(1604,889,1736,942, "重新進行","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
+    If intX > 0 And intY > 0 Then 
+        MoveTo intX, intY
         Delay 1000
         LeftClick 1
     End If
@@ -254,7 +264,7 @@ Sub 選擇隊伍dm()
         dm_ret = dm.FindStr(1477,889,1606,935, "選擇隊伍","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
-            Delay 1000
+            Delay 2000
             LeftClick 1
             Exit Do
         End If

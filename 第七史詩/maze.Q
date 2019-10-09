@@ -121,7 +121,7 @@ Sub 尼克斯特的聖所
         End If
     Loop 
     Call Lib.epic7_ver2.GO_W()
-    Call Lib.epic7_ver2.GO_W()
+    Call Lib.epic7_ver2.GO_W_CLICK()
     Call Lib.epic7_ver2.GO_RED_N()
     Do
         Call Lib.epic7_ver2.寶箱dm()

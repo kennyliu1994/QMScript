@@ -56,11 +56,26 @@ End Sub
 //    End If    
 //Loop
 //MoveTo 1093,734
-Do    
-    Delay 30000
-    dm_ret = dm.FindStr(1170,66,1210,102,"x","4d4d50-303030",1.0,intX,intY)
+//Do
+//    Delay 1000
+//    LeftClick 1
+//    dm_ret = dm.FindStr(973,235,1017,261,"Fate","ffffff-303030",1.0,intX,intY)
+//    If intX > 0 And intY > 0 Then 
+//        MoveTo 1001,942
+//        Delay 500
+//        LeftClick 1
+//        Exit Do
+//    End If 
+//Loop
+Do
+    dm_ret = dm.FindStr(1580, 270, 1643, 303, "¦w¸Ë", "f6fbf9-303030", 1.0, intX, intY)
     If intX > 0 And intY > 0 Then 
-        MessageBox "end"
+        MoveTo 1616,288
+        Delay 500
+        LeftClick 1
+        MoveTo 262,26
+        Delay 500
+        LeftClick 1
         Exit Do
-    End If 
+    End If    
 Loop

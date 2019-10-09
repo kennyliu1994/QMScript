@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=331047a9-9b81-426f-ab79-e8013b07176b
 Description=戰鬥重複
-Enable=1
+Enable=0
 AutoRun=0
 [Repeat]
 Type=0
@@ -34,16 +34,13 @@ Sub 挑戰首領
         End If    
     Loop
 End Sub
-Sub 挑戰首領BOSS
-    Delay 2000
-    dm_ret = dm.FindStr(914,739,1009,770, "挑戰首領","fcffff-303030", 0.9,intX,intY)
-    If intX > 0 And intY > 0 Then 
-        MoveTo intX,intY
-        dm.LeftClick 
-    End If    
-End Sub
 Sub 戰鬥
     Do
+        dm_ret = dm.FindStr(910,753,1008,791, "挑戰首領","fcffff-303030", 0.9,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo intX,intY
+            dm.LeftClick 
+        End If    
         dm_ret = dm.FindStr(935,939,985,972, "戰鬥","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX,intY
@@ -99,7 +96,6 @@ dm.SetPath "d:\大漠找圖"
 dm_ret = dm.SetDict(0, "劍與遠征.txt")
 Do
     Call 挑戰首領()
-    Call 挑戰首領BOSS()
     Call 戰鬥()
     Call 再次挑戰或下一關()
 Loop
