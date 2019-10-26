@@ -324,3 +324,69 @@ Sub 關技能dm()
     id = dm.Play("sound\關技能.mp3")
     dm.Stop id
 End Sub
+Sub 帳篷LL光鐮()    
+    MoveTo 319,929
+    Delay 1000
+    LeftClick 1
+    MoveTo 1097,672
+    Delay 1000
+    LeftClick 1
+    Do
+        dm_ret = dm.FindStr(203,65,276,114, "返回","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo 1275,700
+            Delay 1000
+            LeftClick 1
+            Exit Do
+        End If    
+    Loop
+    Do
+        dm_ret = dm.FindStr(1086,367,1262,421, "安慰助陣","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo intX, intY 
+            Delay 1000
+            LeftClick 1
+            Delay 1500
+            LeftClick 1
+            Exit Do
+        End If    
+    Loop
+    Do
+        dm_ret = dm.FindStr(825,249,1083,303, "露營對話結果","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo intX, intY 
+            Delay 1000
+            LeftClick 1
+            Exit Do
+        End If    
+    Loop
+    Do
+        dm_ret = dm.FindStr(203,65,276,114, "返回","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo 1275,700
+            Delay 1000
+            LeftClick 1
+            Exit Do
+        End If    
+    Loop
+    Do
+        dm_ret = dm.FindStr(1087,487,1265,541, "傷心回憶","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo intX, intY
+            Delay 1000
+            LeftClick 1
+            Delay 1500
+            LeftClick 1
+            Exit Do
+        End If    
+    Loop
+    Do
+        dm_ret = dm.FindStr(825,249,1083,303, "露營對話結果","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
+        If intX > 0 And intY > 0 Then 
+            MoveTo intX, intY 
+            Delay 1000
+            LeftClick 1
+            Exit Do
+        End If    
+    Loop
+End Sub

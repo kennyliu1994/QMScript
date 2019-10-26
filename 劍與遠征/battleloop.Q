@@ -28,7 +28,7 @@ Sub 挑戰首領
         dm_ret = dm.FindStr(919,848,1014,882, "挑戰首領","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX,intY
-            Delay 500
+            Delay 1000
             dm.LeftClick 
             Exit Do
         End If    
@@ -39,13 +39,13 @@ Sub 戰鬥
         dm_ret = dm.FindStr(910,753,1008,791, "挑戰首領","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
-            Delay 500
+            Delay 1000
             dm.LeftClick 
         End If    
         dm_ret = dm.FindStr(935,939,985,972, "戰鬥","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX,intY
-            Delay 500
+            Delay 1000
             dm.LeftClick 
             Exit Do
         End If    
@@ -56,20 +56,20 @@ Sub 再次挑戰或下一關
         dm_ret = dm.FindStr(918,885,1002,909, "再次挑戰","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX,intY
-            Delay 500
+            Delay 1000
             dm.LeftClick 
             Call 戰鬥()
         End If
         dm_ret = dm.FindStr(928,856,993,884, "下一關","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo 953,422
-            Delay 500
+            Delay 1000
             dm.LeftClick
             Do
                 dm_ret = dm.FindStr(919,848,1014,882, "挑戰首領","fcffff-303030", 0.9,intX,intY)
                 If intX > 0 And intY > 0 Then 
                     MoveTo 965, 792
-                    Delay 500
+                    Delay 1000
                     dm.LeftClick 
                     Call 領取()
                     Exit Do
@@ -84,7 +84,7 @@ Sub 領取
         dm_ret = dm.FindStr(933,707,986,738, "領取","fcffff-303030", 0.9,intX,intY)
         If intX > 0 And intY > 0 Then 
             MoveTo intX,intY
-            Delay 500
+            Delay 1000
             dm.LeftClick 
             Exit Do
         End If    

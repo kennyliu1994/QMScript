@@ -27,24 +27,129 @@ SetupOCXFile=
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\大漠找圖"
-dm_ret = dm.SetDict(0, "normal.txt")
+dm_ret = dm.SetDict(0, "裝備.txt")
 //////////////////////////////////////////////////////////////////////////測試
-dm_ret = dm.FindStr(1604,889,1736,942, "重新進行","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
-Do
-    dm_ret = dm.FindStr(1604,889,1736,942, "重新進行","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)
+Dim output(13)
+Dim part
+part = inputbox("部位" & vbcr & "1 武器" & vbcr & "2 帽子" & vbcr & "3 衣服" & vbcr & "4 項鍊" & vbcr & "5 戒指" & vbcr & "6 鞋子", "提示")
+If part = 1 Then 
+    output(0) = "w"
+ElseIf part = 2 Then
+    output(0) = "h"
+ElseIf part = 3 Then
+    output(0) = "a"
+ElseIf part = 4 Then
+    output(0) = "n"
+ElseIf part = 5 Then
+    output(0) = "r"
+ElseIf part  = 6 Then
+    output(0) = "b"
+Else 
+End If
+Dim name(5)
+Dim value
+value = Split(inputbox("數值", "提示"), " ", - 1 , 1)
+Delay 1000
+Dim main(8)
+main(0) = "暴擊傷害"
+main(1) = "暴擊率"
+main(2) = "生命力"
+main(3) = "攻擊力"
+main(4) = "防禦力"
+main(5) = "速度"
+main(6) = "效果命中"
+main(7) = "效果抵抗"
+For Each i In main
+    dm_ret = dm.FindStr(698, 477, 834, 530, i, "fcf7f0-303030|bec2b8-303030", 1.0, intX, intY)
     If intX > 0 And intY > 0 Then 
-        MoveTo intX, intY 
-    End If    
-Loop
-////////////////////////////////////////////////////////////////////
+        name(0) = i
+    End If
+Next
+Dim Chi_secondary(8)
+Chi_secondary(0) = "暴擊傷害"
+Chi_secondary(1) = "暴擊率"
+Chi_secondary(2) = "生命力"
+Chi_secondary(3) = "攻擊力"
+Chi_secondary(4) = "防禦力"
+Chi_secondary(5) = "速度"
+Chi_secondary(6) = "效果命中"
+Chi_secondary(7) = "效果抗性"
+For Each i In Chi_secondary
+    dm_ret = dm.FindStr(668, 560, 775, 592, i, "828282-303030|5e5e5e-303030", 0.8, intX, intY)
+    If intX > 0 And intY > 0 Then 
+        name(1) = i
+    End If
+Next
+For Each i In Chi_secondary
+    dm_ret = dm.FindStr(668, 591, 777, 625, i, "828282-303030|5e5e5e-303030", 0.8, intX, intY)
+    If intX > 0 And intY > 0 Then 
+        name(2) = i
+    End If
+Next
+For Each i In Chi_secondary
+    dm_ret = dm.FindStr(666, 622, 782, 655, i, "828282-303030|5e5e5e-303030", 0.8, intX, intY)
+    If intX > 0 And intY > 0 Then 
+        name(3) = i
+    End If
+Next
+For Each i In Chi_secondary
+    dm_ret = dm.FindStr(667, 652, 776, 687, i, "828282-303030|5e5e5e-303030", 0.8, intX, intY)    
+    If intX > 0 And intY > 0 Then 
+        name(4) = i
+    End If
+Next
+For i = 0 To 4
+    TracePrint name(i)
+Next
+//r 3 0 0 0 13 12 60 0 0 22 0 3
+For i = 1 To 12
+    output(i) = 0
+Next
+For i = 0 To 4
+    If StrComp(name(i), "攻擊力") = 0  Then 
+        If value(i) > 0
+            output(2) = value(i)
+        Else 
+            output(3) = -value(i)
+        End If
+    ElseIf StrComp(name(i), "生命力") = 0 Then 
+        If value(i) > 0
+            output(4) = value(i)
+        Else 
+            output(5) = -value(i)
+        End If
+    ElseIf StrComp(name(i), "防禦力") = 0 Then 
+        If value(i) > 0
+            output(6) = value(i)
+        Else 
+            output(7) = -value(i)
+        End If
+    ElseIf StrComp(name(i), "暴擊率") = 0 Then 
+        output(8) = -value(i)
+    ElseIf StrComp(name(i), "暴擊傷害") = 0 Then 
+        output(9) = -value(i)
+    ElseIf StrComp(name(i), "效果命中") = 0 Then 
+        output(10) = -value(i)
+    ElseIf StrComp(name(i), "效果抗性") = 0 Then 
+        output(11) = -value(i)
+    ElseIf StrComp(name(i), "速度") = 0 Then 
+        output(12) = value(i)
+    Else 
+        TracePrint "Not Found"
+    End If
+Next
+For i = 0 To 12
+    TracePrint output(i)
+Next
+//////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////找字
 //Do
-//    dm_ret = dm.FindStr(1610,894,1731,935, "再來一次","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY)//    
+//    dm_ret = dm.FindStr(1087,487,1265,541, "傷心回憶","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
 //    If intX > 0 And intY > 0 Then 
-//        MoveTo intX, intY 
+//        MoveTo intX, intY
 //        Delay 1000
 //        LeftClick 1
 //        Exit Do

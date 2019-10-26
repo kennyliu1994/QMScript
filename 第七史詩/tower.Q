@@ -29,7 +29,7 @@ dm.SetPath "d:\大漠找圖"
 dm_ret = dm.SetDict(0, "normal.txt")
 i = inputbox("迴圈幾次", "提示")
 For i
-    Call Lib.epic7_ver2.戰鬥開始dm()
+    Call Lib.epic7.戰鬥開始dm()
     Do
         dm_ret = dm.FindStr(1622,891,1726,940, "下一層","fcf7f0-303030|bec2b8-303030", 0.9,intX,intY)  
         If intX > 0 And intY > 0 Then 
@@ -41,4 +41,4 @@ For i
     Loop
     Delay 3000
 Next
-Call Lib.epic7_ver2.結束dm()
+Call Lib.epic7.結束dm()

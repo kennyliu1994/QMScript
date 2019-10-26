@@ -24,12 +24,12 @@ SetupOCXFile=
 
 [Script]
 Sub 重甲兵頭盔()
-    Call Lib.epic7_ver2.戰鬥開始dm()
-    Call Lib.epic7_ver2.GO_E_CLICK()
-    Call Lib.epic7_ver2.GO_E_CLICK()
-    Call Lib.epic7_ver2.GO_RED_N_CLICK()
+    Call Lib.epic7.戰鬥開始dm()
+    Call Lib.epic7.GO_E_CLICK()
+    Call Lib.epic7.GO_E_CLICK()
+    Call Lib.epic7.GO_RED_N_CLICK()
     Do
-        Call Lib.epic7_ver2.寶箱dm()
+        Call Lib.epic7.寶箱dm()
         IfColor 1661,747,"76D2FF",0 Then
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 297, 159
@@ -46,9 +46,9 @@ Sub 重甲兵頭盔()
             Exit Do
         End If
     Loop
-    Call Lib.epic7_ver2.GO_RED_N()
+    Call Lib.epic7.GO_RED_N()
     Do
-        Call Lib.epic7_ver2.寶箱dm()
+        Call Lib.epic7.寶箱dm()
         IfColor 1661,747,"76D2FF",0 Then
             '==========以下是按鍵精靈錄製的內容==========
             MoveTo 364, 156
@@ -84,11 +84,11 @@ dm_ret = dm.SetDict(0, "normal.txt")
 i = inputbox("迴圈幾次", "提示")
 Call 重甲兵頭盔()
 For i - 1
-    Call Lib.epic7_ver2.CLEARdm()
-    Call Lib.epic7_ver2.確認dm()
-    Call Lib.epic7_ver2.準備戰鬥dm()
-    Call Lib.epic7_ver2.選擇隊伍dm()
+    Call Lib.epic7.CLEARdm()
+    Call Lib.epic7.確認dm()
+    Call Lib.epic7.準備戰鬥dm()
+    Call Lib.epic7.選擇隊伍dm()
     Call 重甲兵頭盔()
 Next
-Call Lib.epic7_ver2.CLEARdm()
-Call Lib.epic7_ver2.結束dm()
+Call Lib.epic7.CLEARdm()
+Call Lib.epic7.結束dm()

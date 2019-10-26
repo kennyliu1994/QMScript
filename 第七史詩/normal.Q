@@ -10,7 +10,7 @@ RunOnce=1
 EnableWindow=
 MacroID=55343fdd-1ca5-407e-a1f0-941deddeb16f
 Description=一般
-Enable=0
+Enable=1
 AutoRun=0
 [Repeat]
 Type=0
@@ -26,27 +26,27 @@ SetupOCXFile=
 Sub 選擇好友
     i = inputbox("迴圈幾次", "提示")
     For i - 1
-        Call Lib.epic7_ver2.戰鬥開始dm()
-        Call Lib.epic7_ver2.CLEARdm()
-        Call Lib.epic7_ver2.確認dm()
-        Call Lib.epic7_ver2.選擇隊伍dm()
+        Call Lib.epic7.戰鬥開始dm()
+        Call Lib.epic7.CLEARdm()
+        Call Lib.epic7.確認dm()
+        Call Lib.epic7.選擇隊伍dm()
     Next
-    Call Lib.epic7_ver2.戰鬥開始dm()
-    Call Lib.epic7_ver2.CLEARdm()
-    Call Lib.epic7_ver2.結束dm()
+    Call Lib.epic7.戰鬥開始dm()
+    Call Lib.epic7.CLEARdm()
+    Call Lib.epic7.結束dm()
 End Sub
 Sub 不選擇好友
     i = inputbox("迴圈幾次", "提示")
     For i - 1
-        Call Lib.epic7_ver2.戰鬥開始dm()
-        Call Lib.epic7_ver2.行動力不足dm()
-        Call Lib.epic7_ver2.CLEARdm()
-        Call Lib.epic7_ver2.確認dm()
+        Call Lib.epic7.戰鬥開始dm()
+        Call Lib.epic7.行動力不足dm()
+        Call Lib.epic7.CLEARdm()
+        Call Lib.epic7.確認dm()
     Next
-    Call Lib.epic7_ver2.戰鬥開始dm()
-    Call Lib.epic7_ver2.行動力不足dm()
-    Call Lib.epic7_ver2.CLEARdm()
-    Call Lib.epic7_ver2.結束dm()
+    Call Lib.epic7.戰鬥開始dm()
+    Call Lib.epic7.行動力不足dm()
+    Call Lib.epic7.CLEARdm()
+    Call Lib.epic7.結束dm()
 End Sub
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
