@@ -26,7 +26,7 @@ SetupOCXFile=
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\大漠找圖"
-dm_ret = dm.SetDict(0, "normal.txt")
+dm_ret = dm.SetDict(0, "epic7_normal.txt")
 Sub 挑戰
     dm_ret = dm.FindStr(1307,247,1376,972, "挑戰", "fcf7f0-303030|bec2b8-303030", 0.9, intX, intY)
     If intX > 0 And intY > 0 Then

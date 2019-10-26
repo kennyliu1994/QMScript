@@ -214,7 +214,7 @@ End Sub
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\大漠找圖"
-dm_ret = dm.SetDict(0, "normal.txt")
+dm_ret = dm.SetDict(0, "epic7_normal.txt")
 i = inputbox("1 普通迷宮1右下左上" & vbcr & "2 普通迷宮2右上左下" & vbcr & "3 普通迷宮3女王左上" & vbcr & "4 地獄迷宮左上" & vbcr & "5 地獄迷宮右上"& vbcr & "6 尼克斯特的聖所", "提示")
 If i = 1 Then Call 普通1右下左上()
 If i = 2 Then Call 普通迷宮2右上左下()

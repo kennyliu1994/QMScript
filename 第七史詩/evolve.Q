@@ -26,7 +26,7 @@ SetupOCXFile=
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\¤jºz§ä¹Ï"
-dm_ret = dm.SetDict(0, "normal.txt")
+dm_ret = dm.SetDict(0, "epic7_normal.txt")
 Do
     Do
         dm_ret = dm.FindStr(1411,417,1487,464, "Max","ff8205-303030|ff9e13-303030", 0.9,intX,intY)

@@ -85,7 +85,7 @@ End Sub
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\大漠找圖"
-dm_ret = dm.SetDict(0, "normal.txt")
+dm_ret = dm.SetDict(0, "epic7_normal.txt")
 i = inputbox("迴圈幾次", "提示")
 For i - 1
     Call Lib.epic7.戰鬥開始dm()

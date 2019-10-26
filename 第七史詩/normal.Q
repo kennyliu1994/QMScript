@@ -51,7 +51,7 @@ End Sub
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()
 dm.SetPath "d:\大漠找圖"
-dm_ret = dm.SetDict(0, "normal.txt")
+dm_ret = dm.SetDict(0, "epic7_normal.txt")
 i = inputbox("1 選擇好友" & vbcr & "2 不選擇好友(自動消耗葉子)", "提示")
 If i = 1 Then Call 選擇好友()
 If i = 2 Then Call 不選擇好友()
