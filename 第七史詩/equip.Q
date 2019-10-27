@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=39cd7f43-fc3f-4a47-86c5-2275c5b35261
-Description=epic7_equipment
+Description=¸Ë³Æ
 Enable=0
 AutoRun=0
 [Repeat]
