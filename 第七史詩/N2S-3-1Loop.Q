@@ -25,7 +25,7 @@ SetupOCXFile=
 [Script]
 Sub °j°éªÎ®Æ()
     Do
-        dm.FindPic 160,866,241,974, "picture\medicine.bmp", "000000", 0.9, 0, intX, intY
+        dm.FindPic 160,866,241,974, "picture\epic7\medicine.bmp", "000000", 0.9, 0, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo 303, 172
             Delay 1200

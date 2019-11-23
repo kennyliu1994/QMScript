@@ -24,8 +24,6 @@ SetupOCXFile=
 
 [Script]
 Sub 普通1右下左上
-    Call Lib.epic7.戰鬥開始dm()
-    Delay 5000
     Call Lib.epic7.GO_E()
     Call Lib.epic7.GO_S()
     Call Lib.epic7.GO_E()
@@ -144,7 +142,14 @@ Sub 普通迷宮3女王左上
     Call Lib.epic7.GO_W()
     Call Lib.epic7.GO_RED_N()
     Call Lib.epic7.GO_RED_N()
-    Call Lib.epic7.結束dm()
+    Call Lib.epic7.GO_W()
+    Do
+        dm_ret = dm.CmpColor(1663, 348, "ffd276", 1.0)
+        If dm_ret = 0 Then
+            Call Lib.epic7.結束dm()
+            Exit Do
+        End If
+    Loop
 End Sub
 Sub 地獄迷宮左上
     Call Lib.epic7.GO_W()

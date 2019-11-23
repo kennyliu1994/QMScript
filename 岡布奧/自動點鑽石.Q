@@ -8,8 +8,8 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=0169d7e6-b580-4a34-92dc-4b2263f55fa8
-Description=骰子
+MacroID=0902f85a-3971-4be6-8d31-88945c6bb775
+Description=自動點鑽石
 Enable=1
 AutoRun=0
 [Repeat]
@@ -23,13 +23,18 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-For 15
-    MoveTo 948, 511
-    Delay 500
+MoveTo 1064,549
+For 99
+    Delay 100
     LeftClick 1
-    Delay 500
-    KeyPress 27,1
-    MoveTo 1867,898
-    Delay 500
+Next
+MoveTo 963,356
+For 99
+    Delay 100
+    LeftClick 1
+Next
+MoveTo 850,547
+For 99
+    Delay 100
     LeftClick 1
 Next

@@ -8,8 +8,8 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=9f91dc95-7d38-414d-9a18-a8b343d8d4cd
-Description=肥料進化
+MacroID=02f31d51-a4a1-4927-b5ec-723790ba54d2
+Description=狼進化
 Enable=0
 AutoRun=0
 [Repeat]
@@ -63,15 +63,6 @@ Do
                     Exit Do
                 End If    
             Loop
-            Exit Do
-        End If    
-    Loop
-    Do
-        dm_ret = dm.FindStr(865,254,1047,314, "升級成功","fcf7f0-303030|bec2b8-303030", 0.9,intX,intY)
-        If intX > 0 And intY > 0 Then 
-            MoveTo intX, intY
-            Delay 1000
-            LeftClick 1
             Exit Do
         End If    
     Loop

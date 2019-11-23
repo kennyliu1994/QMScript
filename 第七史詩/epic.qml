@@ -271,7 +271,7 @@ Sub ¿ï¾Ü¶¤¥îdm()
     Loop
 End Sub
 Sub Ä_½cdm()
-    dm.FindPic 119,489,1800,652, "picture\treasure.bmp", "000000", 0.7, 0, intX, intY
+    dm.FindPic 119,489,1800,652, "picture\epic7\treasure.bmp", "000000", 0.7, 0, intX, intY
     If intX > 0 And intY > 0 Then 
         MoveTo intX+71, intY+61
         LeftClick 1
@@ -346,7 +346,7 @@ Sub ±bÁOLL¥úÅI()
             MoveTo intX, intY 
             Delay 1000
             LeftClick 1
-            Delay 1500
+            Delay 2000
             LeftClick 1
             Exit Do
         End If    
@@ -375,7 +375,7 @@ Sub ±bÁOLL¥úÅI()
             MoveTo intX, intY
             Delay 1000
             LeftClick 1
-            Delay 1500
+            Delay 2000
             LeftClick 1
             Exit Do
         End If    
@@ -389,4 +389,59 @@ Sub ±bÁOLL¥úÅI()
             Exit Do
         End If    
     Loop
+End Sub
+Sub skill_1()
+    MoveTo 1464,917
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub skill_2()
+    MoveTo 1593,916
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub skill_3()
+    MoveTo 1723,919
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub attack_left()
+    MoveTo 1230,525
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub attack_up()
+    MoveTo 1407,406
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub attack_down()
+    MoveTo 1430,713
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub attack_right()
+    MoveTo 1623,545
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub help_down()
+    MoveTo 521,673
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub help_right()
+    MoveTo 696,492
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub help_left()
+    MoveTo 303,552
+    Delay 1000
+    LeftClick 1
+End Sub
+Sub help_up()
+    MoveTo 467,401
+    Delay 1000
+    LeftClick 1
 End Sub
