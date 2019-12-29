@@ -8,7 +8,7 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=55ab217a-9ab4-4dea-8b3a-94a80e4e6ff9
+MacroID=55343fdd-1ca5-407e-a1f0-941deddeb16f
 Description=一般
 Enable=1
 AutoRun=0
@@ -25,25 +25,28 @@ SetupOCXFile=
 [Script]
 Sub 選擇好友
     i = inputbox("迴圈幾次", "提示")
-    For i
-        Call Lib.epic7.戰鬥開始()
-        Call Lib.epic7.CLEAR()
-        Call Lib.epic7.確認()
-        Call Lib.epic7.重新進行()
-        Call Lib.epic7.選擇隊伍()
+    For i - 1
+        Call Lib.epic7.戰鬥開始dm()
+        Call Lib.epic7.CLEARdm()
+        Call Lib.epic7.確認dm()
+        Call Lib.epic7.選擇隊伍dm()
     Next
-    Call Lib.epic7.結束()
+    Call Lib.epic7.戰鬥開始dm()
+    Call Lib.epic7.CLEARdm()
+    Call Lib.epic7.結束dm()
 End Sub
 Sub 不選擇好友
     i = inputbox("迴圈幾次", "提示")
-    For i
-        Call Lib.epic7.戰鬥開始()
-        //        Call Lib.epic7.行動力不足()
-        Call Lib.epic7.CLEAR()
-        Call Lib.epic7.確認()
-        Call Lib.epic7.重新進行()
+    For i - 1
+        Call Lib.epic7.戰鬥開始dm()
+        Call Lib.epic7.行動力不足dm()
+        Call Lib.epic7.CLEARdm()
+        Call Lib.epic7.確認dm()
     Next
-    Call Lib.epic7.結束()
+    Call Lib.epic7.戰鬥開始dm()
+    Call Lib.epic7.行動力不足dm()
+    Call Lib.epic7.CLEARdm()
+    Call Lib.epic7.結束dm()
 End Sub
 Set dm = createobject("dm.dmsoft")
 //TracePrint dm.ver()

@@ -9,7 +9,7 @@ StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
 MacroID=ebd04ae2-3d6c-4b0e-aceb-6fdcba967a77
-Description=馬卡龍塔
+Description=馬卡龍塔(自動買體)
 Enable=0
 AutoRun=0
 [Repeat]
@@ -30,6 +30,7 @@ dm_ret = dm.SetDict(0, "epic7_normal.txt")
 i = inputbox("迴圈幾次", "提示")
 For i
     Call Lib.epic7.戰鬥開始dm()
+    Call Lib.epic7.行動力不足dm()
     Do
         dm_ret = dm.FindStr(1622,891,1726,940, "下一層","fcf7f0-303030|bec2b8-303030", 0.9,intX,intY)  
         If intX > 0 And intY > 0 Then 

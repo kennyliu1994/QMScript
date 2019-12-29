@@ -758,8 +758,7 @@ Sub main
     '==========以上是按鍵精靈錄製的內容==========
 End Sub
 Do
-//    For 836
-    For 7200/8.679
+    For 14400/8.679
         Call main()
         Delay 6000
         //8.679sec

@@ -346,8 +346,10 @@ Sub ±bÁOLL¥úÅI()
             MoveTo intX, intY 
             Delay 1000
             LeftClick 1
-            Delay 2000
+            Delay 3000
             LeftClick 1
+            Delay 1000
+            LeftClick 1    
             Exit Do
         End If    
     Loop
@@ -375,8 +377,10 @@ Sub ±bÁOLL¥úÅI()
             MoveTo intX, intY
             Delay 1000
             LeftClick 1
-            Delay 2000
+            Delay 3000
             LeftClick 1
+            Delay 1000
+            LeftClick 1   
             Exit Do
         End If    
     Loop
@@ -389,21 +393,6 @@ Sub ±bÁOLL¥úÅI()
             Exit Do
         End If    
     Loop
-End Sub
-Sub skill_1()
-    MoveTo 1464,917
-    Delay 1000
-    LeftClick 1
-End Sub
-Sub skill_2()
-    MoveTo 1593,916
-    Delay 1000
-    LeftClick 1
-End Sub
-Sub skill_3()
-    MoveTo 1723,919
-    Delay 1000
-    LeftClick 1
 End Sub
 Sub attack_left()
     MoveTo 1230,525

@@ -24,12 +24,12 @@ SetupOCXFile=
 
 [Script]
 For 15
-    MoveTo 948, 511
+    MoveTo 949, 510
     Delay 500
     LeftClick 1
     Delay 500
     KeyPress 27,1
-    MoveTo 1867,898
+    MoveTo 1865, 894
     Delay 500
     LeftClick 1
 Next

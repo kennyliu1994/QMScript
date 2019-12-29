@@ -8,7 +8,7 @@ StopHotkey=123
 StopHotkeyMod=0
 RunOnce=1
 EnableWindow=
-MacroID=4b67f969-5442-4655-955b-68cb70127ea5
+MacroID=688f6649-260b-4e02-a055-190e6701c9ef
 Description=測試
 Enable=0
 AutoRun=0
@@ -30,10 +30,10 @@ dm.SetPath "d:\大漠找圖"
 dm_ret = dm.SetDict(0, "epic7_normal.txt")
 //////////////////////////////////////////////////////////////////////////測試
 Do
-    dm.FindPic 751, 384, 1845, 541, "picture\epic7\哥布林.bmp", "000000", 0.7, 0, intX, intY
+    dm_ret = dm.FindStr(1606,891,1704,938, "確認", "fcf7f0-303030|bec2b8-303030", 0.8, intX, intY)
     If intX > 0 And intY > 0 Then 
         MoveTo intX, intY
-    End If    
+    End If
 Loop
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
@@ -46,12 +46,13 @@ Loop
 //dm.WriteFile "123.txt", vbcr & "哈哈哈"
 //////////////////////////////////////////////////////////////////////////找字
 //Do
-//    dm_ret = dm.FindStr(1587, 926, 1738, 981, "戰鬥開始", "fdf9f0-303030", 0.8, intX, intY)
+//    dm_ret = dm.FindStr(1087,487,1265,541, "傷心回憶","fcf7f0-303030|bec2b8-303030", 1.0,intX,intY)
 //    If intX > 0 And intY > 0 Then 
-//        TracePrint "FOUND"
-//    Else 
-//        TracePrint "NOT FOUND"
-//    End If
+//        MoveTo intX, intY
+//        Delay 1000
+//        LeftClick 1
+//        Exit Do
+//    End If    
 //Loop
 //////////////////////////////////////////////////////////////////////////找多點
 //Do
@@ -77,9 +78,10 @@ Loop
 //TracePrint b
 //////////////////////////////////////////////////////////////////////////找圖片
 //Do
-//    dm.FindPic 204, 713, 292, 798, "picture\epic7\主線W.bmp", "000000", 0.7, 0, intX, intY
+//    dm.FindPic 119,275,1799,427, "picture\哥布林閘門.bmp", "000000", 0.6, 0, intX, intY
 //    If intX > 0 And intY > 0 Then 
-//        MoveTo intX, intY
+//        MoveTo intX, intY 
+//        LeftClick 1
 //    End If    
 //Loop
 //////////////////////////////////////////////////////////////////////////
