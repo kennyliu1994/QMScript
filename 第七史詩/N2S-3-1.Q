@@ -94,7 +94,18 @@ For i
     Call 肥料()
     Call Lib.epic7.CLEAR()
     Call Lib.epic7.確認()
-    Call Lib.epic7.準備戰鬥()
+    Do
+        Call Lib.epic7.協助朋友()
+        Call Lib.epic7.親密度()
+        Call Lib.epic7.緊急任務()
+        dm.FindStr 1446, 932, 1577, 981, "準備戰鬥", "fdf9f0-303030|bdc4b8-303030", 0.8, intX, intY
+        If intX > 0 And intY > 0 Then 
+            MoveTo intX, intY
+            Delay 1000
+            LeftClick 1
+            Exit Do
+        End If
+    Loop
     Call Lib.epic7.選擇隊伍()
 Next
 Call Lib.epic7.結束()

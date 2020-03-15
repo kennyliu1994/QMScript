@@ -30,12 +30,28 @@ dm.SetPath "d:\大漠找圖"
 dm_ret = dm.SetDict(0, "epic7_normal.txt")
 //////////////////////////////////////////////////////////////////////////測試
 Do
-    dm.FindPic 751, 384, 1845, 541, "picture\epic7\哥布林.bmp", "000000", 0.7, 0, intX, intY
-    If intX > 0 And intY > 0 Then 
-        MoveTo intX, intY
-    End If    
+    dm_ret = dm.CmpColor(241, 352, "ffc161", 1.0)
+    If dm_ret = 0 Then
+        '==========以下是按鍵精靈錄製的內容==========
+        MoveTo 250, 182
+        Delay 461
+        LeftClick 1
+        MoveTo 336, 425
+        Delay 1398
+        LeftDown 1
+        MoveTo 940, 457
+        Delay 700
+        LeftUp 1
+        MoveTo 439, 660
+        Delay 673
+        LeftClick 1
+        MoveTo 1085, 705
+        Delay 1078
+        LeftClick 1
+        '==========以上是按鍵精靈錄製的內容==========
+        Exit Do
+    End If
 Loop
-//////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////找色
 //dm_ret = dm.FindColor(706,209,1214,765, "123456-000000|aabbcc-030303|ddeeff-202020", 1.0, 0, intX, intY)

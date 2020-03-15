@@ -38,7 +38,7 @@ Sub 不選擇好友
     i = inputbox("迴圈幾次", "提示")
     For i
         Call Lib.epic7.戰鬥開始()
-        //        Call Lib.epic7.行動力不足()
+        Call Lib.epic7.行動力不足()
         Call Lib.epic7.CLEAR()
         Call Lib.epic7.確認()
         Call Lib.epic7.重新進行()
