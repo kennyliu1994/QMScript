@@ -56,7 +56,7 @@ Sub GO_S()
 End Sub
 Sub GO_E_CLICK()
     Do
-        dm_ret = dm.CmpColor(1663, 348, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(1680, 353, "ffc667", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -71,7 +71,7 @@ Sub GO_E_CLICK()
 End Sub
 Sub GO_RED_N_CLICK()
     Do
-        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(241, 352, "ffc161", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -86,7 +86,7 @@ Sub GO_RED_N_CLICK()
 End Sub
 Sub GO_W_CLICK()
     Do
-        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(234, 783, "ffca6a", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -101,7 +101,7 @@ Sub GO_W_CLICK()
 End Sub
 Sub GO_S_CLICK()
     Do
-        dm_ret = dm.CmpColor(1661,747, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(1682, 783, "ffc667", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -173,8 +173,23 @@ Sub FAILED()
         MoveTo intX, intY
         Delay 1000
         LeftClick 1
+        Do
+            dm.FindStr 1500, 932, 1661, 992, "選擇隊伍", "fdf9f0-303030|bdc4b8-303030", 0.7, intX, intY
+            If intX > 0 And intY > 0 Then 
+                MoveTo intX, intY
+                Delay 1000
+                LeftClick 1
+            End If
+            dm.FindStr 1587, 926, 1738, 981, "戰鬥開始", "fdf9f0-303030|bdc4b8-303030", 0.75, intX, intY        
+            If intX > 0 And intY > 0 Then 
+                MoveTo intX, intY
+                Delay 1000
+                LeftClick 1
+                Exit Do
+            End If
+        Loop
         //        Call 選擇隊伍()
-        Call 戰鬥開始()
+        //        Call 戰鬥開始()
     End If    
 End Sub
 Sub 確認()
@@ -244,6 +259,9 @@ End Sub
 //End Sub
 Sub 準備戰鬥()
     Do
+        Call 協助朋友()
+        Call 親密度()
+        Call 緊急任務()
         dm.FindStr 1446, 932, 1577, 981, "準備戰鬥", "fdf9f0-303030|bdc4b8-303030", 0.8, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
@@ -251,9 +269,6 @@ Sub 準備戰鬥()
             LeftClick 1
             Exit Do
         End If
-        //        Call 協助朋友()
-        //        Call 親密度()
-        //        Call 緊急任務()
     Loop
 End Sub
 Sub 選擇隊伍()

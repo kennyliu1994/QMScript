@@ -111,10 +111,24 @@ Sub 普通迷宮2右上左下
     Call Lib.epic7.GO_E()
     Call Lib.epic7.GO_E()
     Call Lib.epic7.GO_RED_N()
-    MessageBox "手動打王&auto"
+    Do
+        dm_ret = dm.CmpColor(1680, 353, "ffc667", 1.0)
+        If dm_ret = 0 Then 
+            MoveTo 1569, 955
+            Delay 1000
+            LeftClick 1
+            MoveTo 1632, 378
+            Delay 444
+            LeftClick 1
+            Exit Do
+        End If
+    Loop
     Do
         dm_ret = dm.CmpColor(234, 783, "ffca6a", 1.0)
         If dm_ret = 0 Then 
+            MoveTo 1569, 955
+            Delay 1000
+            LeftClick 1
             Call Lib.epic7.帳篷小水奶()
             Exit Do
         End If
@@ -150,7 +164,24 @@ Sub 普通迷宮2右上左下
     Call Lib.epic7.GO_E()
     Do
         dm_ret = dm.CmpColor(234, 783, "ffca6a", 1.0)
-        If dm_ret = 0 Then
+        If dm_ret = 0 Then 
+            '==========以下是按鍵精靈錄製的內容==========
+            MoveTo 298, 130
+            Delay 449
+            LeftClick 1
+            MoveTo 761, 189
+            Delay 1461
+            LeftDown 1
+            MoveTo 859, 669
+            Delay 662
+            LeftUp 1
+            MoveTo 572, 179
+            Delay 935
+            LeftClick 1
+            MoveTo 1063, 711
+            Delay 926
+            LeftClick 1
+            '==========以上是按鍵精靈錄製的內容==========
             Call Lib.epic7.結束()
             Exit Do
         End If
@@ -177,7 +208,7 @@ Sub 普通迷宮3女王左上
             Exit Do
         End If
     Loop
-    MessageBox "BOSS"
+    Call Lib.epic7.GO_RED_N()
     Do
         dm_ret = dm.CmpColor(1682, 783, "ffc667", 1.0)
         If dm_ret = 0 Then 
@@ -307,7 +338,7 @@ Sub 尼克斯特的聖所
     Call Lib.epic7.戰鬥開始()
     Do
         Call Lib.epic7.寶箱()
-        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(241, 352, "ffc161", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -331,7 +362,7 @@ Sub 尼克斯特的聖所
     Call Lib.epic7.GO_W()
     Do
         Call Lib.epic7.寶箱()
-        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(234, 783, "ffca6a", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000

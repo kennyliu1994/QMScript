@@ -8,7 +8,6 @@ MacroID=44e32598-92e9-45b5-abee-32a4ef80468d
 //寫完保存後，在任一命令庫上點擊右鍵並選擇“刷新”即可
 Sub GO_E()
     Do
-        Call 寶箱()
         dm_ret = dm.CmpColor(1680, 353, "ffc667", 1.0)
         If dm_ret = 0 Then
             MoveTo 1632, 378
@@ -21,7 +20,6 @@ Sub GO_E()
 End Sub
 Sub GO_RED_N()
     Do
-        Call 寶箱()
         dm_ret = dm.CmpColor(241, 352, "ffc161", 1.0)
         If dm_ret = 0 Then
             MoveTo 282, 373
@@ -34,7 +32,6 @@ Sub GO_RED_N()
 End Sub
 Sub GO_W()
     Do
-        Call 寶箱()
         dm_ret = dm.CmpColor(234, 783, "ffca6a", 1.0)
         If dm_ret = 0 Then
             MoveTo 211, 761
@@ -47,7 +44,6 @@ Sub GO_W()
 End Sub
 Sub GO_S()
     Do
-        Call 寶箱()
         dm_ret = dm.CmpColor(1682, 783, "ffc667", 1.0)
         If dm_ret = 0 Then
             MoveTo 1632, 718
@@ -60,8 +56,7 @@ Sub GO_S()
 End Sub
 Sub GO_E_CLICK()
     Do
-        Call 寶箱()
-        dm_ret = dm.CmpColor(1663, 348, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(1680, 353, "ffc667", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -76,8 +71,7 @@ Sub GO_E_CLICK()
 End Sub
 Sub GO_RED_N_CLICK()
     Do
-        Call 寶箱()
-        dm_ret = dm.CmpColor(255,346, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(241, 352, "ffc161", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -92,8 +86,7 @@ Sub GO_RED_N_CLICK()
 End Sub
 Sub GO_W_CLICK()
     Do
-        Call 寶箱()
-        dm_ret = dm.CmpColor(254, 746, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(234, 783, "ffca6a", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -108,8 +101,7 @@ Sub GO_W_CLICK()
 End Sub
 Sub GO_S_CLICK()
     Do
-        Call 寶箱()
-        dm_ret = dm.CmpColor(1661,747, "ffd276", 1.0)
+        dm_ret = dm.CmpColor(1682, 783, "ffc667", 1.0)
         If dm_ret = 0 Then
             MoveTo 947, 529
             Delay 1000
@@ -135,15 +127,15 @@ Sub 戰鬥開始()
     Call 背包空間不足()
     //    Call 戰鬥力不足確認dm()
 End Sub
-Sub 戰鬥力不足確認dm()
-    Delay 1000
-    dm.FindStr 1061,652,1132,696, "確認","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY
-    If intX > 0 And intY > 0 Then 
-        MoveTo 1094, 672
-        Delay 1000
-        LeftClick 1
-    End If
-End Sub
+//Sub 戰鬥力不足確認dm()
+//    Delay 1000
+//    dm.FindStr 1061,652,1132,696, "確認","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY
+//    If intX > 0 And intY > 0 Then 
+//        MoveTo 1094, 672
+//        Delay 1000
+//        LeftClick 1
+//    End If
+//End Sub
 Sub 背包空間不足()
     Delay 1000
     dm.FindStr 821, 328, 1001, 386, "背包空間", "fdf9f0-303030|bdc4b8-303030", 0.8, intX, intY
@@ -165,7 +157,6 @@ Sub 行動力不足()
 End Sub
 Sub CLEAR()
     Do
-        Call 寶箱()
         Call FAILED()
         dm.FindPic 908, 243, 1005, 366, "picture\epic7\CLEAR.bmp", "000000", 0.8, 0, intX, intY
         If intX > 0 And intY > 0 Then 
@@ -225,6 +216,7 @@ Sub 緊急任務()
         MoveTo 824,731
         Delay 1000
         LeftClick 1
+        //        Call 確認()
     End If
 End Sub
 Sub 重新進行()
@@ -241,15 +233,15 @@ Sub 重新進行()
         End If
     Loop
 End Sub
-Sub 再來一次dm()
-    Delay 1000
-    dm.FindStr 1610,894,1731,935, "再來一次","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY
-    If intX > 0 And intY > 0 Then 
-        MoveTo intX, intY
-        Delay 1000
-        LeftClick 1
-    End If
-End Sub
+//Sub 再來一次dm()
+//    Delay 1000
+//    dm.FindStr 1610,894,1731,935, "再來一次","fcf7f0-303030|bec2b8-303030", 0.8,intX,intY
+//    If intX > 0 And intY > 0 Then 
+//        MoveTo intX, intY
+//        Delay 1000
+//        LeftClick 1
+//    End If
+//End Sub
 Sub 準備戰鬥()
     Do
         dm.FindStr 1446, 932, 1577, 981, "準備戰鬥", "fdf9f0-303030|bdc4b8-303030", 0.8, intX, intY
@@ -259,6 +251,9 @@ Sub 準備戰鬥()
             LeftClick 1
             Exit Do
         End If
+        //        Call 協助朋友()
+        //        Call 親密度()
+        //        Call 緊急任務()
     Loop
 End Sub
 Sub 選擇隊伍()
@@ -318,15 +313,7 @@ Sub 結束()
     dm.Stop id
     ExitScript
 End Sub
-Sub 帳篷dm()
-    id = dm.Play("sound\帳篷.mp3")
-    dm.Stop id
-End Sub
-Sub 關技能dm()
-    id = dm.Play("sound\關技能.mp3")
-    dm.Stop id
-End Sub
-Sub 帳篷LL光鐮()    
+Sub 帳篷小水奶()    
     MoveTo 288, 971
     Delay 1000
     LeftClick 1
@@ -336,27 +323,25 @@ Sub 帳篷LL光鐮()
     Do
         dm.FindStr 157, 59, 247, 114, "返回", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
         If intX > 0 And intY > 0 Then 
-            MoveTo 1287, 732
+            MoveTo 1289,734
             Delay 1000
             LeftClick 1
             Exit Do
         End If    
     Loop
     Do
-        dm.FindStr 1092, 377, 1279, 438, "安慰助陣", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 1094, 366, 1277, 421, "安慰助陣", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
             LeftClick 1
-            Delay 3000
-            LeftClick 1
-            Delay 1000
-            LeftClick 1    
             Exit Do
         End If    
     Loop
     Do
-        dm.FindStr 816, 248, 1098, 317, "露營對話結果", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        Delay 1000
+        LeftClick 1
+        dm.FindStr 820, 232, 912, 282, "露營", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
@@ -367,29 +352,27 @@ Sub 帳篷LL光鐮()
     Do
         dm.FindStr 157, 59, 247, 114, "返回", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
         If intX > 0 And intY > 0 Then 
-            MoveTo 1287, 732
+            MoveTo 1289,734
             Delay 1000
             LeftClick 1
             Exit Do
         End If    
     Loop
     Do
-        dm.FindStr 1092, 503, 1280, 564, "傷心回憶", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 1096, 563, 1279, 619, "傷心回憶", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
             LeftClick 1
-            Delay 3000
-            LeftClick 1
-            Delay 1000
-            LeftClick 1   
             Exit Do
         End If    
     Loop
     Do
-        dm.FindStr 816, 248, 1098, 317, "露營對話結果","fdf9f0-303030|bdc4b8-303030", 1.0,intX,intY
+        Delay 1000
+        LeftClick 1
+        dm.FindStr 820, 232, 912, 282, "露營", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
         If intX > 0 And intY > 0 Then 
-            MoveTo intX, intY 
+            MoveTo intX, intY
             Delay 1000
             LeftClick 1
             Exit Do

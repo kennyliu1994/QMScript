@@ -23,7 +23,8 @@ SetupOCXFile=
 [Comment]
 
 [Script]
-For 15
+i = inputbox("times", "´£¥Ü")
+For i
     MoveTo 949, 510
     Delay 500
     LeftClick 1
