@@ -336,7 +336,7 @@ Sub 帳篷小水奶()
     Delay 1000
     LeftClick 1
     Do
-        dm.FindStr 157, 59, 247, 114, "返回", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 157, 59, 247, 114, "返回", "fdf9f0-303030|bdc4b8-303030", 0.9, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo 1289,734
             Delay 1000
@@ -345,7 +345,7 @@ Sub 帳篷小水奶()
         End If    
     Loop
     Do
-        dm.FindStr 1094, 366, 1277, 421, "安慰助陣", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 1094, 366, 1277, 421, "安慰助陣", "fdf9f0-303030|bdc4b8-303030", 0.9, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
@@ -356,7 +356,7 @@ Sub 帳篷小水奶()
     Do
         Delay 1000
         LeftClick 1
-        dm.FindStr 820, 232, 912, 282, "露營", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 820, 232, 912, 282, "露營", "fdf9f0-303030|bdc4b8-303030", 0.9, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
@@ -365,7 +365,7 @@ Sub 帳篷小水奶()
         End If    
     Loop
     Do
-        dm.FindStr 157, 59, 247, 114, "返回", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 157, 59, 247, 114, "返回", "fdf9f0-303030|bdc4b8-303030", 0.9, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo 1289,734
             Delay 1000
@@ -374,7 +374,7 @@ Sub 帳篷小水奶()
         End If    
     Loop
     Do
-        dm.FindStr 1096, 563, 1279, 619, "傷心回憶", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 1096, 563, 1279, 619, "傷心回憶", "fdf9f0-303030|bdc4b8-303030", 0.9, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
@@ -385,7 +385,7 @@ Sub 帳篷小水奶()
     Do
         Delay 1000
         LeftClick 1
-        dm.FindStr 820, 232, 912, 282, "露營", "fdf9f0-303030|bdc4b8-303030", 1.0, intX, intY
+        dm.FindStr 820, 232, 912, 282, "露營", "fdf9f0-303030|bdc4b8-303030", 0.9, intX, intY
         If intX > 0 And intY > 0 Then 
             MoveTo intX, intY
             Delay 1000
